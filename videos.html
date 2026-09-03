@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Videos (528) | Nathan Tracey Piano</title>
+  <meta name="description" content="Browse and search all 528 piano recordings of Star Wars themes and sacred worship hymns by Nathan Tracey.">
+  <link rel="icon" type="image/svg+xml" href="Youtube%20Logo.svg">
+  <link rel="apple-touch-icon" href="Youtube%20Logo.svg">
+
+  <!-- Primary Typography: Sofia Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Star Wars Specialty Typography: Mandalore -->
+  <link href="https://db.onlinewebfonts.com/c/9ccc937e37db90da1030ca2aece5a69c?family=Mandalore" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-sofia: "Sofia Sans", -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      --font-mandalore: "Mandalore", var(--font-sofia);
+
+      /* LIGHT MODE */
+      --bg-canvas: #ffffff;
+      --bg-subtle: #f5f5f7;
+      --bg-surface: #ffffff;
+
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-tertiary: #86868b;
+
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-card: rgba(0, 0, 0, 0.06);
+      --divider: rgba(0, 0, 0, 0.08);
+
+      --accent-blue: #0071e3;
+      --accent-blue-hover: #0077ed;
+      --accent-blue-tint: rgba(0, 113, 227, 0.08);
+
+      --accent-green: #248a3d;
+      --accent-green-tint: rgba(36, 138, 61, 0.09);
+
+      --sw-gold: #8a6200;
+      --sw-gold-bg: rgba(217, 155, 0, 0.12);
+
+      --nav-bg: rgba(255, 255, 255, 0.82);
+      --nav-border: rgba(0, 0, 0, 0.08);
+      --nav-text: #1d1d1f;
+
+      --card-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+      --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        /* DARK MODE */
+        --bg-canvas: #000000;
+        --bg-subtle: #121214;
+        --bg-surface: #161618;
+
+        --text-primary: #f5f5f7;
+        --text-secondary: #a1a1a6;
+        --text-tertiary: #6e6e73;
+
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-card: rgba(255, 255, 255, 0.08);
+        --divider: rgba(255, 255, 255, 0.1);
+
+        --accent-blue: #2997ff;
+        --accent-blue-hover: #47a6ff;
+        --accent-blue-tint: rgba(41, 151, 255, 0.14);
+
+        --accent-green: #34c759;
+        --accent-green-tint: rgba(52, 199, 89, 0.16);
+
+        --sw-gold: #ffd60a;
+        --sw-gold-bg: rgba(255, 214, 10, 0.16);
+
+        --nav-bg: rgba(0, 0, 0, 0.82);
+        --nav-border: rgba(255, 255, 255, 0.12);
+        --nav-text: #f5f5f7;
+
+        --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        --card-shadow-hover: 0 14px 40px rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    ::selection { background: rgba(0, 113, 227, 0.28); color: inherit; }
+    :root { caret-color: var(--accent-blue); }
+    :focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
+
+    body {
+      font-family: var(--font-sofia);
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* ══════ APPLE GLOBAL NAV ══════ */
+    .apple-global-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 44px;
+      z-index: 9999;
+      background: var(--nav-bg);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--nav-border);
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .apple-global-nav-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .nav-brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      text-decoration: none;
+      color: var(--nav-text);
+      flex-shrink: 0;
+    }
+
+    .nav-brand-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #97CEE3;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-brand-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .nav-brand-text {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      font-family: var(--font-sofia);
+      color: var(--nav-text);
+    }
+
+    .nav-brand-name {
+      font-size: 0.94rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--nav-text);
+    }
+
+    .nav-brand-piano {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--nav-text);
+      opacity: 0.82;
+    }
+
+    .nav-links-list {
+      display: flex;
+      align-items: center;
+      gap: 1.75rem;
+      list-style: none;
+    }
+
+    .nav-links-list a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 400;
+      transition: color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links-list a:hover { color: var(--text-primary); }
+    .nav-links-list a.nav-link-active { color: var(--text-primary); font-weight: 600; }
+
+    .nav-pill-cta {
+      background: var(--accent-blue);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 0.35rem 0.95rem;
+      border-radius: var(--radius-pill);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .nav-pill-cta:hover {
+      background: var(--accent-blue-hover);
+      transform: scale(1.02);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ══════ CATALOG HERO ══════ */
+    .catalog-page-hero {
+      margin-top: 44px;
+      padding: 4.5rem 1.25rem 2.5rem;
+      text-align: center;
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-card);
+    }
+
+    .catalog-page-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.4rem;
+    }
+
+    .catalog-page-hero p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* ══════ AIRY, SPACIOUS CONTROLS ══════ */
+    .catalog-section {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 5rem;
+    }
+
+    .catalog-controls {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2.25rem;
+    }
+
+    .search-sort-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      width: 100%;
+      max-width: 720px;
+      flex-wrap: wrap;
+    }
+
+    .apple-search-box {
+      position: relative;
+      flex: 1;
+      min-width: 290px;
+    }
+
+    .search-lens {
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-tertiary);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .apple-search-field {
+      width: 100%;
+      height: 48px;
+      padding: 0 2.5rem 0 2.85rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      font-family: var(--font-sofia);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    .apple-search-field:focus {
+      border-color: var(--accent-blue);
+      background: var(--bg-surface);
+      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+    }
+
+    .search-reset-btn {
+      position: absolute;
+      right: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-tertiary);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: none;
+      line-height: 1;
+    }
+
+    .search-reset-btn.visible { display: block; }
+
+    /* ROOMY, NON-CRAMPED SORT SELECT DROPDOWN */
+    .apple-sort-select {
+      height: 48px;
+      padding: 0 2.75rem 0 1.35rem;
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      font-family: var(--font-sofia);
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      outline: none;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2386868b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .apple-sort-select:hover {
+      border-color: var(--accent-blue);
+      background-color: var(--bg-surface);
+    }
+
+    .apple-sort-select:focus {
+      border-color: var(--accent-blue);
+      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+    }
+
+    .apple-segmented-bar {
+      display: inline-flex;
+      background: var(--bg-subtle);
+      padding: 4px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .seg-pill {
+      padding: 0.5rem 1.3rem;
+      border-radius: var(--radius-pill);
+      border: none;
+      background: transparent;
+      font-family: inherit;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .seg-pill-count {
+      font-size: 0.78rem;
+      opacity: 0.75;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .seg-pill.active {
+      background: var(--text-primary);
+      color: var(--bg-canvas);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.14);
+    }
+
+    .catalog-counter-bar {
+      font-size: 0.9rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+      text-align: center;
+      margin-bottom: 1.75rem;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ══════ VIDEO GRID ══════ */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .apple-video-card {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .apple-video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--card-shadow-hover);
+      border-color: var(--border-subtle);
+    }
+
+    .video-thumb-box {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .video-thumb-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.35s ease;
+    }
+
+    .apple-video-card:hover .video-thumb-box img {
+      transform: scale(1.03);
+    }
+
+    .video-play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.18s ease;
+    }
+
+    .apple-video-card:hover .video-play-overlay { opacity: 1; }
+
+    .play-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.95);
+      color: #000000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .video-card-content {
+      padding: 1.15rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .tag-category {
+      align-self: flex-start;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      margin-bottom: 0.55rem;
+    }
+
+    .tag-starwars {
+      background: var(--sw-gold-bg);
+      color: var(--sw-gold);
+      font-family: var(--font-mandalore);
+      letter-spacing: 0.08em;
+    }
+
+    .tag-hymn {
+      background: var(--accent-green-tint);
+      color: var(--accent-green);
+    }
+
+    .tag-other {
+      background: rgba(0, 113, 227, 0.1);
+      color: var(--accent-blue);
+    }
+
+    .video-title-heading {
+      font-size: 0.98rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text-primary);
+      margin-bottom: 0.75rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      letter-spacing: -0.01em;
+    }
+
+    .video-meta-row {
+      margin-top: auto;
+      font-size: 0.82rem;
+      color: var(--text-tertiary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .catalog-paginate {
+      text-align: center;
+      margin-top: 3rem;
+    }
+
+    .apple-btn-outline {
+      background: transparent;
+      color: var(--accent-blue);
+      border: 1px solid var(--accent-blue);
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.75rem 1.8rem;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    .apple-btn-outline:hover {
+      background: var(--accent-blue-tint);
+      transform: scale(1.02);
+    }
+
+    /* ══════ APPLE MODAL LIGHTBOX ══════ */
+    .apple-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .apple-modal-overlay.open { display: flex; }
+
+    .apple-modal-window {
+      position: relative;
+      width: 100%;
+      max-width: 880px;
+      background: #000000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: -42px;
+      right: 0;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.25rem;
+    }
+
+    /* ══════ FOOTER ══════ */
+    .apple-directory-footer {
+      background: var(--bg-subtle);
+      padding: 3.5rem 1.25rem 2.5rem;
+      color: var(--text-tertiary);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .directory-grid {
+      max-width: 1024px;
+      margin: 0 auto 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .directory-col-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-primary);
+      margin-bottom: 0.85rem;
+    }
+
+    .directory-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .directory-list a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .directory-list a:hover { color: var(--text-primary); }
+
+    .footer-legal-strip {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--divider);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    @media (max-width: 860px) {
+      .directory-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links-list {
+        display: none;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-subtle);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      .nav-links-list.open { display: flex; }
+      .mobile-menu-toggle { display: block; }
+      .directory-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- APPLE GLOBAL HEADER -->
+  <header class="apple-global-nav">
+    <div class="apple-global-nav-inner">
+      <a href="index-2.html" class="nav-brand-group">
+        <div class="nav-brand-avatar">
+          <img src="Youtube%20Logo.svg" alt="Nathan Tracey Piano" width="24" height="24">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Nathan Tracey</span>
+          <span class="nav-brand-piano">Piano</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links-list" id="navLinksList">
+          <li><a href="index-2.html#starwars">Star Wars</a></li>
+          <li><a href="index-2.html#hymns">Sacred Hymns</a></li>
+          <li><a href="videos.html" class="nav-link-active">All Videos (528)</a></li>
+          <li><a href="index-2.html#audio">Free Audio</a></li>
+          <li><a href="index-2.html#schedule">Schedule</a></li>
+          <li><a href="index-2.html#request">Request</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <a href="https://www.youtube.com/@nathantraceypiano?sub_confirmation=1" target="_blank" class="nav-pill-cta">
+          Subscribe
+        </a>
+        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="catalog-page-hero">
+    <h1>Video Library</h1>
+    <p>Complete archive of 528 piano recordings, Star Wars arrangements, and sacred hymns.</p>
+  </section>
+
+  <!-- CATALOG SECTION -->
+  <section class="catalog-section">
+    <div class="catalog-controls">
+      <!-- Search & Sort Row -->
+      <div class="search-sort-row">
+        <div class="apple-search-box">
+          <div class="search-lens">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <input type="text" id="videoSearchInput" class="apple-search-field" placeholder="Search by song, movie, or hymn title..." aria-label="Search all arrangements">
+          <button type="button" class="search-reset-btn" id="searchResetBtn" aria-label="Clear search">&times;</button>
+        </div>
+
+        <select id="sortSelect" class="apple-sort-select" aria-label="Sort videos">
+          <option value="default">Release Date (Latest)</option>
+          <option value="title-asc">Title (A &ndash; Z)</option>
+          <option value="title-desc">Title (Z &ndash; A)</option>
+        </select>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="apple-segmented-bar" role="tablist" aria-label="Filter arrangements by category">
+        <button class="seg-pill active" data-filter="all" role="tab" aria-selected="true">
+          <span>All</span>
+          <span class="seg-pill-count" id="countAll">528</span>
+        </button>
+        <button class="seg-pill" data-filter="sw" role="tab" aria-selected="false">
+          <span>Star Wars</span>
+          <span class="seg-pill-count" id="countSw">182</span>
+        </button>
+        <button class="seg-pill" data-filter="hymn" role="tab" aria-selected="false">
+          <span>Hymns</span>
+          <span class="seg-pill-count" id="countHymn">299</span>
+        </button>
+        <button class="seg-pill" data-filter="other" role="tab" aria-selected="false">
+          <span>Shorts &amp; Updates</span>
+          <span class="seg-pill-count" id="countOther">47</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="catalog-counter-bar" id="catalogCounterBar">
+      Showing 24 of 528 arrangements
+    </div>
+
+    <div class="video-grid" id="videoCatalogGrid"></div>
+
+    <div class="catalog-paginate">
+      <button type="button" class="apple-btn-outline" id="moreVideosBtn">
+        Load More Videos
+      </button>
+    </div>
+  </section>
+
+  <!-- 5-COLUMN DIRECTORY FOOTER -->
+  <footer class="apple-directory-footer">
+    <div class="directory-grid">
+      <div>
+        <h4 class="directory-col-title">Collections</h4>
+        <ul class="directory-list">
+          <li><a href="index-2.html#starwars">Star Wars Themes</a></li>
+          <li><a href="index-2.html#hymns">Sacred Hymns</a></li>
+          <li><a href="videos.html">Full Video Archive</a></li>
+          <li><a href="videos.html?filter=sw">Star Wars Catalog</a></li>
+          <li><a href="videos.html?filter=hymn">Hymns Catalog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="directory-col-title">Resources</h4>
+        <ul class="directory-list">
+          <li><a href="https://drive.google.com/drive/folders/12g400yqbRkD7qevVjM3f322bc0AaHsyk?usp=sharing" target="_blank">Google Drive MP3s</a></li>
+          <li><a href="index-2.html#audio">Free Audio Library</a></li>
+          <li><a href="index-2.html#request">Song Requests</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="directory-col-title">Schedule</h4>
+        <ul class="directory-list">
+          <li><a href="index-2.html#schedule">Star Wars Wednesdays</a></li>
+          <li><a href="index-2.html#schedule">Hymn Sundays</a></li>
+          <li><a href="https://www.youtube.com/@nathantraceypiano/community" target="_blank">Community Posts</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="directory-col-title">Channel</h4>
+        <ul class="directory-list">
+          <li><a href="https://www.youtube.com/@nathantraceypiano" target="_blank">YouTube Channel</a></li>
+          <li><a href="https://www.youtube.com/@nathantraceypiano/videos" target="_blank">Longform Videos</a></li>
+          <li><a href="https://www.youtube.com/@nathantraceypiano/shorts" target="_blank">Shorts</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="directory-col-title">About</h4>
+        <ul class="directory-list">
+          <li><a href="index-2.html#hero">Nathan Tracey</a></li>
+          <li><a href="index-2.html#request">Contact / Request</a></li>
+          <li><span style="color: var(--text-tertiary);">Soli Deo Gloria</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal-strip">
+      <div>
+        Copyright &copy; 2026 Nathan Tracey Piano. All rights reserved.
+      </div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="index-2.html" style="color: var(--text-secondary); text-decoration: none;">Home</a>
+        <a href="videos.html" style="color: var(--text-secondary); text-decoration: none;">All Videos</a>
+        <a href="index-2.html#request" style="color: var(--text-secondary); text-decoration: none;">Requests</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="apple-modal-overlay" id="videoModal" aria-hidden="true">
+    <div class="apple-modal-window">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close player">&times;</button>
+      <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000;">
+        <iframe id="modalIframe" style="position: absolute; inset: 0; width: 100%; height: 100%; border: none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinksList = document.getElementById("navLinksList");
+    if (menuToggle && navLinksList) {
+      menuToggle.addEventListener("click", () => navLinksList.classList.toggle("open"));
+      navLinksList.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => navLinksList.classList.remove("open"));
+      });
+    }
+
+    const ALL_CHANNEL_VIDEOS = [{"id":"pGwmj2Ip9Kg","title":"Be Thou My Vision - Piano Cover with Lyrics","views":"36 views","published":"10 days ago","cat":"hymn"},{"id":"CdltU0FwULk","title":"Han Solo and the Princess on Piano (Star Wars Love Theme)","views":"297 views","published":"1 month ago","cat":"sw"},{"id":"mVkhOZ_dmDY","title":"It Is Well with My Soul - Piano Cover with Lyrics","views":"330 views","published":"1 month ago","cat":"hymn"},{"id":"CrQ3F20765Q","title":"Moff Gideon's Theme on Piano (The Mandalorian)","views":"172 views","published":"1 month ago","cat":"sw"},{"id":"6fjt1aEoukY","title":"Come Thou Fount of Every Blessing - Piano Cover with Lyrics","views":"30 views","published":"2 months ago","cat":"hymn"},{"id":"yfVE0SXtm_k","title":"Darth Maul\u2019s \u201cShadow Lord\u201d Theme on Piano (Dark Star Wars Music)","views":"453 views","published":"2 months ago","cat":"sw"},{"id":"q35svFhzn3w","title":"Alas! And Did My Savior Bleed - Piano Cover with Lyrics","views":"66 views","published":"3 months ago","cat":"hymn"},{"id":"7oTakA73JNA","title":"The Mandalorian Complete Piano Medley (10 Themes from the Show!)","views":"45 views","published":"3 months ago","cat":"sw"},{"id":"U_uHmb1Q178","title":"The Mandalorian & Grogu Final Trailer: Every Theme on Piano","views":"132 views","published":"3 months ago","cat":"sw"},{"id":"GUvJFG9X07E","title":"My Anchor Holds | Classic Hymn Piano Cover with Lyrics","views":"153 views","published":"4 months ago","cat":"hymn"},{"id":"ipKKGA8JKHw","title":"Spirit of the Living God - Piano Cover with Lyrics","views":"154 views","published":"4 months ago","cat":"hymn"},{"id":"1n0mYDD6QAA","title":"1 Hour of Peaceful Piano Hymns for Prayer & Rest","views":"28 views","published":"5 months ago","cat":"hymn"},{"id":"Iuanm38Ee58","title":"This Imperial March Has a Secret Second Version (Easy vs Hard Piano)","views":"252 views","published":"5 months ago","cat":"sw"},{"id":"m2oHKov3rdc","title":"Fast-Paced Hymn Piano Cover - I Will Sing of My Redeemer","views":"116 views","published":"5 months ago","cat":"hymn"},{"id":"ct0W0IYFV_0","title":"Welcome to Nathan Tracey's Piano Channel! #channeltrailer","views":"34 views","published":"5 months ago","cat":"other"},{"id":"0dsJaamge6Q","title":"Star Wars Theme And Mandalorian Piano Mashup!","views":"135 views","published":"6 months ago","cat":"sw"},{"id":"J9fFTAwtYik","title":"Relaxing Piano Hymn: Our God, Our Help In Ages Past","views":"27 views","published":"6 months ago","cat":"hymn"},{"id":"8OwqXVEPjfw","title":"Star Wars Piano Medley: Mandalorian, Ahsoka, Skeleton Crew & More","views":"62 views","published":"6 months ago","cat":"sw"},{"id":"nteGysGyJmM","title":"Channel Update: Schedule Change & More!","views":"14 views","published":"6 months ago","cat":"other"},{"id":"kffZGvC3XDc","title":"All People That On Earth Do Dwell (Psalm 100) | Piano Hymn with Lyrics","views":"104 views","published":"7 months ago","cat":"hymn"},{"id":"FtNuN3RiYtk","title":"Star Wars: Skeleton Crew - Complete Piano Medley (Main Theme & Soundtrack)","views":"71 views","published":"7 months ago","cat":"sw"},{"id":"UPrXBENZxfE","title":"Relaxing Hymn Collection on Piano | Full Lyrics","views":"53 views","published":"7 months ago","cat":"hymn"},{"id":"yZQl1zYAWSg","title":"Kevin Kiner's A Galaxy Divided (Playable Arrangement)","views":"105 views","published":"7 months ago","cat":"sw"},{"id":"ooWUtWJGM58","title":"Relax with These 7 Piano Worship Instrumental Hymns","views":"62 views","published":"7 months ago","cat":"hymn"},{"id":"3DC7FSk60dc","title":"Star Wars Original Trilogy Medley on Piano!","views":"42 views","published":"7 months ago","cat":"sw"},{"id":"eSHCeawsZnc","title":"Rejoice Ye Pure in Heart - Piano Hymn Cover with Lyrics","views":"83 views","published":"7 months ago","cat":"hymn"},{"id":"UeMC5ahii4A","title":"I Played Important Book of Boba Fett Themes on Piano!","views":"54 views","published":"7 months ago","cat":"sw"},{"id":"YY3DQuLyeTA","title":"With Grateful Heart My Thanks I Bring","views":"65 views","published":"7 months ago","cat":"hymn"},{"id":"O0FJde14AeU","title":"2026 Channel Preview","views":"13 views","published":"8 months ago","cat":"other"},{"id":"wHDa4tMYLT4","title":"Star Wars: Ahsoka Piano Medley","views":"72 views","published":"8 months ago","cat":"sw"},{"id":"cidBou7jP_8","title":"All Creatures of God and King - Piano Cover with Lyrics ","views":"56 views","published":"8 months ago","cat":"hymn"},{"id":"jnC1QV1UNU4","title":"Hark! The Herald Angels Sing - Piano Cover with Lyrics","views":"103 views","published":"8 months ago","cat":"hymn"},{"id":"69HhA89wuy0","title":"Bad Batch Meets Carol of The Bells on Piano!","views":"105 views","published":"8 months ago","cat":"sw"},{"id":"A7vBfrU-lg8","title":"Henry Smart's Angels From the Realms of Glory (Piano)","views":"20 views","published":"8 months ago","cat":"hymn"},{"id":"AUm3Y65LPR0","title":"Five New and Old Christmas Carols on Piano","views":"16 views","published":"8 months ago","cat":"hymn"},{"id":"6ZP5EmH6GH4","title":"How to Play Niamos from Andor on Piano!","views":"321 views","published":"8 months ago","cat":"sw"},{"id":"XFkfwY_254k","title":"What Child Is This? (Christmas Carol Piano Cover)","views":"24 views","published":"8 months ago","cat":"hymn"},{"id":"-F2E2dnC6os","title":"Angels We Have Heard On High (Piano Christmas Carol)","views":"23 views","published":"8 months ago","cat":"hymn"},{"id":"nSUP8ZImV_0","title":"Star Wars: Thrawn\u2019s Deductions (Piano Cover)","views":"145 views","published":"8 months ago","cat":"sw"},{"id":"PGswYnBpZ30","title":"Listen to Six Christmas Piano Carols","views":"37 views","published":"8 months ago","cat":"hymn"},{"id":"_s_ZM9e9L98","title":"Star Wars: Order 66 Piano Cover","views":"168 views","published":"9 months ago","cat":"sw"},{"id":"7PfAl8pEEzM","title":"Show Us Christ - Sovereign Grace Hymn on Piano","views":"52 views","published":"9 months ago","cat":"hymn"},{"id":"z8Nc6D9K_GY","title":"Guess the Star Wars Themes on Piano! (Vol. 1)","views":"94 views","published":"9 months ago","cat":"sw"},{"id":"a8l5qd44Qjo","title":"4 Hours of Calm Piano Hymns | Study, Prayer & Reflection","views":"45 views","published":"9 months ago","cat":"hymn"},{"id":"qUOCj4BGT48","title":"Star Wars: Thrawn's Theme (Epic Piano Cover with Harp, Organ & Vibraphone)","views":"207 views","published":"9 months ago","cat":"sw"},{"id":"QsNJkbkRnCc","title":"Praise, My Soul, The King of Heaven - Indelible Grace Version on Piano","views":"61 views","published":"9 months ago","cat":"hymn"},{"id":"jw5Loj3-cGE","title":"How to Play Baylan\u2019s Theme on Piano (Star Wars Tutorial)","views":"79 views","published":"9 months ago","cat":"sw"},{"id":"rL3HgkucttE","title":"Soothing Piano Hymns for 10 Minutes (Background Hymns Vol. 21)","views":"18 views","published":"9 months ago","cat":"hymn"},{"id":"amfOUKfxLIs","title":"Baylan's Theme - A Haunting Star Wars Piano Theme","views":"209 views","published":"9 months ago","cat":"sw"},{"id":"76MjsJ-kgdY","title":"Jesus Christ Is Risen Today (Lyrics Only) - Piano Hymn","views":"27 views","published":"10 months ago","cat":"hymn"},{"id":"dFwG2nO-KSE","title":"Underrated Star Wars Themes on Piano (Andor, Bad Batch & More)","views":"89 views","published":"10 months ago","cat":"sw"},{"id":"wpqGleXwpl0","title":"Rock Of Ages Piano Cover: The James Ward Arrangement","views":"128 views","published":"10 months ago","cat":"hymn"},{"id":"oeO7p1ndXPw","title":"Star Wars Hero Medley Part 2 (Piano) - Battle of the Heroes, Main Theme, Rebellion Theme & More","views":"68 views","published":"10 months ago","cat":"sw"},{"id":"R3KMP5KUf48","title":"Merciful God - Instrumental Piano Cover with Lyrics from the Gettys & Stuart Townend","views":"68 views","published":"10 months ago","cat":"hymn"},{"id":"KH64ACfzb2E","title":"Over 20 Minutes of Piano Music from the Mandalorian!","views":"181 views","published":"10 months ago","cat":"sw"},{"id":"YQcJHPQgt70","title":"The Risen Christ - A Thoughtful Worship Song on Piano (Cover)","views":"7 views","published":"10 months ago","cat":"hymn"},{"id":"NEhfhznXtkw","title":"Iconic Star Wars Theme from The Sequels - Rey's Theme (Piano Cover)","views":"33 views","published":"10 months ago","cat":"sw"},{"id":"M-i5H74dDH8","title":"Rock of Ages, Cleft For Me - Classic Hymn on Piano","views":"19 views","published":"10 months ago","cat":"hymn"},{"id":"0pav96Q0_fA","title":"How Deep The Father's Love For Us | Full Piano Version","views":"13 views","published":"11 months ago","cat":"hymn"},{"id":"ajAwqvJcWos","title":"How to Play the Mandalorian Theme from Star Wars on Piano!","views":"154 views","published":"11 months ago","cat":"sw"},{"id":"azxTSyxLd2s","title":"Blessed Assurance - A Fanny Crosby Piano Hymn about Assurance","views":"72 views","published":"11 months ago","cat":"hymn"},{"id":"VRoz3biCEkQ","title":"John William's Separatist Army March on Piano #starwars","views":"629 views","published":"11 months ago","cat":"sw"},{"id":"3-TQW4H3PL8","title":"Beneath The Cross Of Jesus - Piano Hymnal Rendition","views":"27 views","published":"11 months ago","cat":"hymn"},{"id":"uMK_TLKBfJk","title":"Thine Be The Glory (Lyrics Only Piano Video)","views":"15 views","published":"11 months ago","cat":"hymn"},{"id":"9M7Hdevi2wI","title":"A Fine Addition to My Collection - General Grievous Theme on Piano (Star Wars)","views":"191 views","published":"1 year ago","cat":"sw"},{"id":"6ThFXO2dsas","title":"For The Beauty of The Earth - A Piano Hymn Praising God for His Creation!","views":"21 views","published":"1 year ago","cat":"hymn"},{"id":"noqiwdnYvHc","title":"I Played Music from Republic Commando! (Piano Cover of Vode An X Clone Theme)","views":"564 views","published":"1 year ago","cat":"sw"},{"id":"wXPhaSVRF5Y","title":"A Piano Hymn for the Evening - Abide With Me: Fast Falls The Eventide","views":"61 views","published":"1 year ago","cat":"hymn"},{"id":"iMIjnQty9rQ","title":"I Played Niamos from Andor on Piano! (Star Wars Pop Song)","views":"353 views","published":"1 year ago","cat":"sw"},{"id":"gfllWo_0Yks","title":"The Hymn about the Salvation Journey (Amazing Grace on Piano)","views":"47 views","published":"1 year ago","cat":"hymn"},{"id":"C2JMmzgf7JA","title":"How To Play The Andor Medley (Piano Tutorial)","views":"255 views","published":"1 year ago","cat":"sw"},{"id":"ytCzXMa9p3g","title":"Jesus Paid It All - Instrumental Piano Hymn with Lyrics","views":"147 views","published":"1 year ago","cat":"hymn"},{"id":"6o2TWwKJ1zM","title":"What Are The Best Bad Batch Themes on Piano? (Star Wars Top 3)","views":"169 views","published":"1 year ago","cat":"sw"},{"id":"pq258Zt6AEE","title":"13 Piano Hymns For Relaxing Background Music (Background Hymns Vol 20)","views":"46 views","published":"1 year ago","cat":"hymn"},{"id":"EqNJyh2wGBI","title":"How To Play Star Wars: Andor Theme - Piano Tutorial","views":"442 views","published":"1 year ago","cat":"sw"},{"id":"3fUSPs7VDGM","title":"Christ the Lord Is Risen Today (Lyrics Only Piano Cover)","views":"27 views","published":"1 year ago","cat":"hymn"},{"id":"cvXALAFFxyE","title":"Star Wars: Yoda's Theme - The Quirky, Wise Jedi on Piano","views":"196 views","published":"1 year ago","cat":"sw"},{"id":"75ARFEWMQ4Q","title":"There Is A Fountain Filled With Blood (Piano Hymn) - Jesus Died for Our Sins","views":"39 views","published":"1 year ago","cat":"hymn"},{"id":"QHlC69P09uQ","title":"Star Wars: Return of the Jedi Soundtrack on Piano! - The Finale","views":"152 views","published":"1 year ago","cat":"sw"},{"id":"4HWD7xtJrQ8","title":"Whatever My God Ordains is Right - An Instrumental Piano Hymn","views":"97 views","published":"1 year ago","cat":"hymn"},{"id":"zbMkUEbo940","title":"The Emperor Arrives on Piano - Palpatine Is Here!","views":"403 views","published":"1 year ago","cat":"sw"},{"id":"CgGnUsqT3DM","title":"Rejoice, the Lord Is King - A Charles Wesley Piano Hymn (Tune by Goss)","views":"58 views","published":"1 year ago","cat":"hymn"},{"id":"OKINppEZ9S8","title":"The Heroes of Star Wars on Piano! (1K Special)","views":"476 views","published":"1 year ago","cat":"sw"},{"id":"0uMolrrL0jw","title":"Star Wars Andor: The Haunting Theme of Mon Mothma (Piano Cover)","views":"215 views","published":"1 year ago","cat":"sw"},{"id":"-BEBsOhxajk","title":"O Great God - Piano Cover - God's Salvation Story in Song","views":"86 views","published":"1 year ago","cat":"hymn"},{"id":"6hl8OpkHWKU","title":"The 5 Best Keith & Kristyn Getty Hymns on Piano (1K Special)","views":"288 views","published":"1 year ago","cat":"hymn"},{"id":"hyESzKwZjZ0","title":"The Bounty Hunter Who Needs No Introduction on Piano (Cad Bane)","views":"250 views","published":"1 year ago","cat":"sw"},{"id":"sDXWleQqu7Q","title":"Andor's Theme of Rebellion on Piano","views":"395 views","published":"1 year ago","cat":"sw"},{"id":"98ld2aK8sgg","title":"My Hope is In The Lord (Piano Cover) - Jesus Died & Lives for Christians","views":"63 views","published":"1 year ago","cat":"hymn"},{"id":"VoWAuAKIRR8","title":"Star Wars Episode 5: The Empire Strikes Back Medley (Piano)","views":"605 views","published":"1 year ago","cat":"sw"},{"id":"60q4JpkkitI","title":"To God Be The Glory on Piano - A Classic Fanny Crosby Hymn","views":"270 views","published":"1 year ago","cat":"hymn"},{"id":"inRNDycYhwY","title":"Great Piano Themes from Across Star Wars! (Improv Session 5)","views":"622 views","published":"1 year ago","cat":"sw"},{"id":"uJTiALbtHqA","title":"Ye Servants of God, Your Master Proclaim - A Piano Hymn about God's Kingdom","views":"60 views","published":"1 year ago","cat":"hymn"},{"id":"aRni5Y56FN8","title":"The Iconic Theme from The Book of Boba Fett! (Book of Boba Fett Main Theme on Piano)","views":"154 views","published":"1 year ago","cat":"sw"},{"id":"V9_FLF2UZfA","title":"This Is My Father's World - Traditional Piano Hymn Cover","views":"19 views","published":"1 year ago","cat":"hymn"},{"id":"YxPHPu1vA_8","title":"Calling for suggestions For Star Wars Piano Videos!","views":"86 views","published":"1 year ago","cat":"sw"},{"id":"xxcW7wub9QU","title":"10 Minutes of The Original Star Wars on Piano (A New Hope Medley)","views":"405 views","published":"1 year ago","cat":"sw"},{"id":"G6mOoCO-aDs","title":"Psalm 62 in Song - My Soul Finds Rest In God Alone (Piano Cover)","views":"379 views","published":"1 year ago","cat":"hymn"},{"id":"vrcxtQgQ8AQ","title":"8 Minutes of Andor Music (Star Wars Saga through Piano)","views":"636 views","published":"1 year ago","cat":"sw"},{"id":"kBUmrvEXeNg","title":"A Peaceful Getty Piano Song - Still, My Soul, Be Still","views":"204 views","published":"1 year ago","cat":"hymn"},{"id":"EFbZqAydyiE","title":"The Rebels of Andor (Piano Themes of Mon Mothma, Luthen, and more)","views":"1.7K views","published":"1 year ago","cat":"sw"},{"id":"eByvcnLmKDA","title":"Speak, O Lord - Contemporary Hymn from Keith Getty & Stuart Townend - Piano Cover #christianmusic","views":"550 views","published":"1 year ago","cat":"hymn"},{"id":"QQDvOFSOoNw","title":"The Villains of Andor (Piano Themes of the ISB, Director Krennic, and more)","views":"1.6K views","published":"1 year ago","cat":"sw"},{"id":"8kciy07t7T8","title":"Bless the Lord, Oh My Soul (1000 Reasons) - Piano Worship Song with Lyrics #instrumentalpiano","views":"569 views","published":"1 year ago","cat":"hymn"},{"id":"j-s8ROLiW30","title":"Over 50 Minutes of Star Wars Piano from Ep. 1-6 Era - May the 4th Special #maythe4th #starwarspiano","views":"129 views","published":"1 year ago","cat":"sw"},{"id":"ah9poCndULE","title":"Maul's Theme from Clone Wars Meets Duel of the Fates in Epic Piano Cover #darthmaul  #pianocover","views":"361 views","published":"1 year ago","cat":"sw"},{"id":"NiV2O_fmiOQ","title":"I Stand Amazed in the Presence - Traditional Piano Hymn with Lyrics (Instrumental) #christianmusic","views":"336 views","published":"1 year ago","cat":"hymn"},{"id":"nFh9t1-Buco","title":"Star Wars: Andor - Piano Cover","views":"499 views","published":"1 year ago","cat":"sw"},{"id":"eL1Ab_RmMuA","title":"1 Hour of Piano Hymns (Contemporary & Traditional Mix) #christianpianomusic #christianhymns","views":"248 views","published":"1 year ago","cat":"hymn"},{"id":"_LKSFRpy4as","title":"Easter Special: 3 Hymns for Easter (Resurrection Piano Music/Lyrics Only) #eastermusic #pianomusic","views":"208 views","published":"1 year ago","cat":"hymn"},{"id":"b3B-Yw9CFgs","title":"Star Wars Rebels: End Credits (Piano Cover) #kevinkiner #starwarsrebels #starwarspiano","views":"188 views","published":"1 year ago","cat":"sw"},{"id":"KA6DQurZZa0","title":"8 Relaxing Piano Hymns for Listening (Background Hymns Vol. 19)","views":"843 views","published":"1 year ago","cat":"hymn"},{"id":"__cDB1iOOgQ","title":"Star Wars: Tales of the Underworld Soundtrack on Piano (Cad Bane, Ventress, & More) #pianocover","views":"644 views","published":"1 year ago","cat":"sw"},{"id":"nma9pwiJY9o","title":"He Will Hold Me Fast - Contemporary Christian Song on Piano with Lyrics (Instrumental) #pianocover","views":"207 views","published":"1 year ago","cat":"hymn"},{"id":"zXQ7Bw77_-E","title":"3 Hours of Christian Piano for Background Music  (Background Hymns Vol. 1-18) #relaxinghymns","views":"1.5K views","published":"1 year ago","cat":"hymn"},{"id":"g9O9bYKuD4I","title":"Over 15 of Your Favorite Star Wars Rebels Soundtracks on Piano! (Piano Medley) #starwarsrebels","views":"638 views","published":"1 year ago","cat":"sw"},{"id":"4Mik5pGLc0U","title":"Creation Sings by Keith & Kristyn Getty & Stuart Townend - #instrumentalpiano Cover with Lyrics","views":"479 views","published":"1 year ago","cat":"hymn"},{"id":"qZH-GPL6pBM","title":"30+ of Your Favorite Star Wars Prequel Soundtracks on Piano! (Ep. 1-3, The Clone Wars, & Bad Batch)","views":"467 views","published":"1 year ago","cat":"sw"},{"id":"TrRlPHfDIB4","title":"Behold Our God - Contemporary Piano Cover with Lyrics #instrumentalpiano #worshipmusic","views":"96 views","published":"1 year ago","cat":"hymn"},{"id":"M_qcZwq_om8","title":"9 Minutes of All Your Favorite Bad Batch Themes on Piano! (Bad Batch Piano Medley) #badbatch #piano","views":"688 views","published":"1 year ago","cat":"sw"},{"id":"458sXClsuHI","title":"Change My Heart, Oh God - Scripture Song on Piano #instrumentalpiano #pianocover #psalms","views":"240 views","published":"1 year ago","cat":"hymn"},{"id":"k-y8DqBipXw","title":"Star Wars Piano Mashup: Dark Trooper Theme & CX Clone Theme #pianomashup #themandalorian #badbatch","views":"156 views","published":"1 year ago","cat":"sw"},{"id":"ccibn7bkerE","title":"He Is Exalted - Piano Worship Song Cover (Instrumental with Lyrics) #worshipmusic","views":"135 views","published":"1 year ago","cat":"hymn"},{"id":"llRFOGfYnag","title":"Star Wars: Ahsoka's Theme by #kevinkiner (Extended Epic Piano Cover) #starwarsmusic  #ahsoka","views":"183 views","published":"1 year ago","cat":"sw"},{"id":"Cp42M9byk0g","title":"A Mighty Fortress Is Our God - An Instrumental Reformation Hymn - Piano Cover with Lyrics","views":"728 views","published":"1 year ago","cat":"hymn"},{"id":"3duAimAw0Y4","title":"Star Wars Piano Medley: Ft Imperial Suite, Skeleton Crew Theme, & More! (Star Wars Improv Session 4)","views":"264 views","published":"1 year ago","cat":"sw"},{"id":"ntbTZuoN4CQ","title":"In Christ Alone - Instrumental Piano Cover with Lyrics #christianpianomusic","views":"532 views","published":"1 year ago","cat":"hymn"},{"id":"-FSzVuxMObw","title":"How to Play Star Wars: Skeleton Crew Main Theme (Piano Tutorial) [End Credits Theme] #skeletoncrew","views":"795 views","published":"1 year ago","cat":"sw"},{"id":"w1J_iQsJJxk","title":"The Church's One Foundation - Instrumental Piano Hymn (Cover with Lyrics)","views":"1K views","published":"1 year ago","cat":"hymn"},{"id":"FJKB32uhtB4","title":"Star Wars: Jod Na Nawood's Theme (Piano Cover) #starwarsskeletoncrew #starwarspiano","views":"294 views","published":"1 year ago","cat":"sw"},{"id":"icg6rzr7IRE","title":"My Hope Is Built On Nothing Less - Classic Hymn Piano Cover with Lyrics (Instrumental) #pianohymns","views":"735 views","published":"1 year ago","cat":"hymn"},{"id":"wjnpow2NA1I","title":"Star Wars Episode 3: Revenge of the Sith Medley (Piano Cover) #starwars #darthvader","views":"642 views","published":"1 year ago","cat":"sw"},{"id":"k2vjl64zqvQ","title":"My Jesus, I Love Thee - Instrumental Piano Cover with Lyrics #classichymns #pianohymns","views":"216 views","published":"1 year ago","cat":"hymn"},{"id":"v_K4CNqu4tU","title":"Crown Him With Many Crowns - Classic Hymn - Instrumental Piano Cover with Lyrics #pianohymns","views":"831 views","published":"1 year ago","cat":"hymn"},{"id":"X5AZN79RB_k","title":"Star Wars: End Credits Theme (Piano Cover) #johnwilliams #starwars #starwarspiano","views":"434 views","published":"1 year ago","cat":"sw"},{"id":"V_ggSjeZGQM","title":"Come, Thou Almighty King - Instrumental Piano Hymn Cover with Lyrics","views":"1K views","published":"1 year ago","cat":"hymn"},{"id":"4C5GXQxIq38","title":"ALL Your Favorite Clone Wars Themes on Piano!! - Star Wars Piano Medley #clonewars","views":"850 views","published":"1 year ago","cat":"sw"},{"id":"k9e1LywalLY","title":"Jesus Loves Me, This I Know - Instrumental Piano Hymn Cover with Lyrics","views":"1.2K views","published":"1 year ago","cat":"hymn"},{"id":"G6D_1jAwpG4","title":"Star Wars Episode 2: Attack of the Clones (Piano Cover) #attackoftheclones","views":"535 views","published":"1 year ago","cat":"sw"},{"id":"amE_sbrdVsw","title":"Holy, Holy, Holy - Instrumental Piano Cover with Lyrics - Classic Hymn","views":"1.2K views","published":"1 year ago","cat":"hymn"},{"id":"YaR7YqATsPE","title":"Nathan Tracey's 2025 Piano Channel Preview","views":"23 views","published":"1 year ago","cat":"other"},{"id":"f1q2mDOyPd4","title":"Star Wars: Skeleton Crew Main Theme (Piano Cover) [End Credits Theme] #skeletoncrew","views":"1.5K views","published":"1 year ago","cat":"sw"},{"id":"WGFMZNp1OIU","title":"8 Minutes of Christian Piano Music for Listening (Background Hymns Vol. 18)","views":"392 views","published":"1 year ago","cat":"hymn"},{"id":"Gds1OjHoQUY","title":"The Mandalorian Theme \u2013 Emotional Orchestral Version (Piano) | Star Wars","views":"248 views","published":"1 year ago","cat":"sw"},{"id":"-S16mEmh-T4","title":"7 Christmas Carols on Piano (Background Hymns Vol. 17) - Lyrics Onscreen #christianpianomusic","views":"240 views","published":"1 year ago","cat":"hymn"},{"id":"Kco7acAIB-k","title":"Star Wars: An Imperial Christmas (Piano Mashup of Carol of the Bells, the Emperor, and Dr. Hemlock)","views":"465 views","published":"1 year ago","cat":"sw"},{"id":"osxDulNlQuM","title":"5 Relaxing Instrumental Christian Piano Songs with Lyrics (Background Hymns Vol. 16)","views":"244 views","published":"1 year ago","cat":"hymn"},{"id":"KEcUwm_XXkg","title":"Star Wars: Princess Leia's Theme (Piano Cover) #starwarspiano #anewhope #starwarsanewhope","views":"318 views","published":"1 year ago","cat":"sw"},{"id":"RoQTx2P7AMI","title":"6 More Christmas Carols on Piano (Background Hymns Vol. 15) - Lyrics Onscreen #christianpianomusic","views":"279 views","published":"1 year ago","cat":"hymn"},{"id":"ieVjIeMESt8","title":"Star Wars: Crosshair's Theme (Piano Tutorial) #pianotutorial #howtoplaypiano #badbatch","views":"336 views","published":"1 year ago","cat":"sw"},{"id":"cjqkai4fjzc","title":"Hymn Session 4 (Instrumental Piano Hymns with Lyrics)","views":"277 views","published":"1 year ago","cat":"hymn"},{"id":"w_KcXlDXiZg","title":"Star Wars Episode 1: The Phantom Menace Medley (Piano Cover) #starwarsthephantommenace","views":"1K views","published":"1 year ago","cat":"sw"},{"id":"hamLx9Xmo8U","title":"I Need Thee Every Hour (Lyrics Only) - Piano Cover","views":"533 views","published":"1 year ago","cat":"hymn"},{"id":"ypMOS-9_ON4","title":"Star Wars Medley 2 - Piano Covers of Greivious' Theme, Main Theme, & More (Medley Palooza Session 2)","views":"202 views","published":"1 year ago","cat":"sw"},{"id":"hjrFmlM62KU","title":"O Father, You Are Sovereign - Instrumental Piano Cover with Lyrics","views":"243 views","published":"1 year ago","cat":"hymn"},{"id":"dWcjjajzCOM","title":"The Power of the Cross - Instrumental Piano Cover with Lyrics","views":"678 views","published":"1 year ago","cat":"hymn"},{"id":"MPhxx9PKwP0","title":"Star Wars: Obi-Wan Kenobi Theme (Piano Cover)","views":"287 views","published":"1 year ago","cat":"sw"},{"id":"h0xGoDFCL0Y","title":"Star Wars: Victory Celebration (Piano Cover) #returnofthejedi","views":"946 views","published":"1 year ago","cat":"sw"},{"id":"YXuvV6gnxgY","title":"Come, Ye Sinners, Poor and Needy - Instrumental Piano Cover with Lyrics","views":"306 views","published":"1 year ago","cat":"hymn"},{"id":"XAxsUftx-VQ","title":"Star Wars: Bo-Katan's Theme (Piano Cover)","views":"467 views","published":"1 year ago","cat":"sw"},{"id":"uXKLq6lOz-8","title":"My Worth Is Not in What I Own - Instrumental Piano Cover with Lyrics","views":"318 views","published":"1 year ago","cat":"hymn"},{"id":"BQtsoinnUpc","title":"Star Wars: Thrawn's Theme X Hemlock's Theme (Piano Cover Mashup)","views":"415 views","published":"1 year ago","cat":"sw"},{"id":"VwRFdYQs4rg","title":"Christ Is Mine Forevermore - Instrumental Piano Cover with Lyrics","views":"1K views","published":"1 year ago","cat":"hymn"},{"id":"U4ap4SGdBaY","title":"How to Play Christ is Mine Forevermore (Piano Tutorial) #cityalight #piano  #pianotutorial","views":"752 views","published":"1 year ago","cat":"hymn"},{"id":"rxQG6o_irgg","title":"Star Wars: Binary Sunset (The Force Theme) - Piano Cover","views":"913 views","published":"1 year ago","cat":"sw"},{"id":"GkG9GvzGpHU","title":"Star Wars: Cantina Band (Piano Cover)","views":"444 views","published":"1 year ago","cat":"sw"},{"id":"1qK3hyiJNuY","title":"Star Wars: The Imperial March (Darth Vader's Theme) \u2013 Piano Cover [RIP James Earl Jones]","views":"1.9K views","published":"1 year ago","cat":"sw"},{"id":"HJU2vnrGQiQ","title":"Wonderful Merciful Savior - Instrumental Piano Hymn Cover with Lyrics","views":"973 views","published":"1 year ago","cat":"hymn"},{"id":"Vbb8e-2JPFU","title":"Star Wars Improv Sessions 1-3 (Medley of Star Wars Piano Covers)","views":"870 views","published":"1 year ago","cat":"sw"},{"id":"2Thab9I7Nug","title":"O Church, Arise - Instrumental Piano Cover with Lyrics","views":"645 views","published":"1 year ago","cat":"hymn"},{"id":"txvTxkUxyLE","title":"Star Wars: The Emperor's Theme (Piano Cover) - Emperor Palpatine's Theme","views":"1.2K views","published":"1 year ago","cat":"sw"},{"id":"5JlbovoLiFA","title":"Hymn Session 3 (Instrumental Piano Hymns with Lyrics)","views":"190 views","published":"2 years ago","cat":"hymn"},{"id":"XRdk-G9AXwI","title":"Star Wars Medley-Palooza Session 1 - Star Wars Piano Covers","views":"348 views","published":"2 years ago","cat":"sw"},{"id":"UEikt0gh7Sc","title":"Praise To The Lord The Almighty - Instrumental Piano Cover with Lyrics","views":"895 views","published":"2 years ago","cat":"hymn"},{"id":"5KQIgynoriI","title":"16 Minutes of Piano Hymns! (Background Hymns Vol. 14)","views":"226 views","published":"2 years ago","cat":"hymn"},{"id":"6XB1r4ssUj0","title":"This is The Day the Lord Has Made - Instrumental Piano Cover with Lyrics","views":"699 views","published":"2 years ago","cat":"hymn"},{"id":"46tX__3Dhl0","title":"Star Wars: The Clone Suite (Piano Cover) [Clone Theme X Order 66 X Bad Batch Theme]","views":"840 views","published":"2 years ago","cat":"sw"},{"id":"eveHOEPWl88","title":"Hymn Session 2 (Instrumental Piano Hymns)","views":"32 views","published":"2 years ago","cat":"hymn"},{"id":"icfRt_hbAPA","title":"Not All the Blood of Beasts - Piano Instrumental Cover with Lyrics","views":"159 views","published":"2 years ago","cat":"hymn"},{"id":"WLmiD0kMCK4","title":"Star Wars Villian Medley (Complete Piano Cover)","views":"775 views","published":"2 years ago","cat":"sw"},{"id":"lLXhVosOAmo","title":"The 10 Best Isaac Watts Hymns (Piano Covers with Lyrics) - Top 10 List","views":"652 views","published":"2 years ago","cat":"hymn"},{"id":"IRKxmHtT5bw","title":"Star Wars Villains Medley (Piano Cover) \u2013 Part 2","views":"639 views","published":"2 years ago","cat":"sw"},{"id":"S3Lb-KprFiU","title":"Hymn Session 1 (Instrumental Piano Hymns)","views":"99 views","published":"2 years ago","cat":"hymn"},{"id":"HV6o6DLxwpY","title":"Star Wars: Crosshair's Theme (Piano Cover)","views":"1K views","published":"2 years ago","cat":"sw"},{"id":"IKc1zGAVH-o","title":"Praise, My Soul, The King of Heaven (Piano Cover with Lyrics)","views":"654 views","published":"2 years ago","cat":"hymn"},{"id":"V6DywIHvznA","title":"Star Wars: Clone X Theme (CX-2 Theme) [Piano Cover]","views":"381 views","published":"2 years ago","cat":"sw"},{"id":"BDZvqGW9FNc","title":"Star Wars: Villains Medley (Piano Cover) \u2013 May the 4th Special","views":"764 views","published":"2 years ago","cat":"sw"},{"id":"qrnVq6qyXpI","title":"Star Wars: Omega's Theme (Piano Cover)","views":"2.6K views","published":"2 years ago","cat":"sw"},{"id":"qpEv6MTyQcU","title":"Praise Him! Praise Him! (Lyrics Only) - Piano Cover","views":"91 views","published":"2 years ago","cat":"hymn"},{"id":"Lf9zy7y9Vho","title":"Star Wars Improv: Session 3 (Piano Medley) \u2014 Ft. Bad Batch & Tales of the Empire Themes","views":"390 views","published":"2 years ago","cat":"sw"},{"id":"SaS2PamuHiU","title":"Up From The Grave He Arose - Piano Cover with Lyrics","views":"843 views","published":"2 years ago","cat":"hymn"},{"id":"Y0UAofZIZEg","title":"11 Relaxing Christian Piano Songs with Lyrics (Background Hymns Vol. 13)","views":"49 views","published":"2 years ago","cat":"hymn"},{"id":"zk8l44IMTdk","title":"Star Wars: Baylan's Theme Piano Tutorial","views":"957 views","published":"2 years ago","cat":"sw"},{"id":"GuGx7s_PVMs","title":"Star Wars: Dr. Hemlock's Theme (Piano Cover)","views":"1.2K views","published":"2 years ago","cat":"sw"},{"id":"3TQP0mKrMms","title":"All I Have Is Christ - Piano Cover with Lyrics","views":"1.1K views","published":"2 years ago","cat":"hymn"},{"id":"ZUeMtOpvmj8","title":"Star Wars: The Bad Batch Theme (Epic Piano Cover)","views":"1.6K views","published":"2 years ago","cat":"sw"},{"id":"mNqgGkTTQqA","title":"Star Wars: Bad Batch Season 3 Medley (Piano Cover)","views":"906 views","published":"2 years ago","cat":"sw"},{"id":"NZHYneg9obc","title":"I Sing The Almighty Power Of God - Piano Cover with Lyrics","views":"699 views","published":"2 years ago","cat":"hymn"},{"id":"1bF_S3kuDaA","title":"Star Wars Improv: Session 2 (Piano Medley)","views":"267 views","published":"2 years ago","cat":"sw"},{"id":"z16FPbFHAho","title":"I Need Thee Every Hour - Piano Cover with Lyrics","views":"22K views","published":"2 years ago","cat":"hymn"},{"id":"qXokAIECtTY","title":"Star Wars Improv: Session 1 (Piano Medley)","views":"829 views","published":"2 years ago","cat":"sw"},{"id":"zgtg7gPt80Q","title":"2024 Channel Preview","views":"32 views","published":"2 years ago","cat":"other"},{"id":"Kdzy5pfan8o","title":"Man of Sorrows! What A Name - Piano Cover with Lyrics","views":"514 views","published":"2 years ago","cat":"hymn"},{"id":"htX1g8yZvKo","title":"10 More Christmas Carols on Piano (Background Hymns Vol. 12) - Lyrics Onscreen #christianpianomusic","views":"353 views","published":"2 years ago","cat":"hymn"},{"id":"69_N9qswzRU","title":"Star Wars X Carol of The Bells (Piano Mashup) - Star Wars Christmas Music","views":"307 views","published":"2 years ago","cat":"sw"},{"id":"aMdERYr9rHw","title":"7 Christmas Carols on Piano (Background Hymns Vol. 11) - Lyrics Onscreen #christianpianomusic","views":"169 views","published":"2 years ago","cat":"hymn"},{"id":"8pOI0SLQ9sE","title":"Star Wars: Thrawn's Arrival - Extended Thrawn's Theme (Organ Version)","views":"1.9K views","published":"2 years ago","cat":"sw"},{"id":"CQU5K0lCQCE","title":"Star Wars: Thrawn's Arrival - Extended Thrawn's Theme (Piano Cover)","views":"3.7K views","published":"2 years ago","cat":"sw"},{"id":"-mt8ox7LnIU","title":"When Morning Gilds The Skies - Piano Cover with Lyrics","views":"918 views","published":"2 years ago","cat":"hymn"},{"id":"X34UeUg2IjY","title":"My Heart Is Filled with Thankfulness - Piano Cover with Lyrics","views":"755 views","published":"2 years ago","cat":"hymn"},{"id":"prutjO49N9g","title":"Star Wars: Duel of the Fates - Anakin vs. Ahsoka Version (Piano Cover)","views":"962 views","published":"2 years ago","cat":"sw"},{"id":"2gZUFYKHdI0","title":"14 Minutes of Relaxing Piano Hymns! (Background Hymns Vol. 10)","views":"63 views","published":"2 years ago","cat":"hymn"},{"id":"g8aLW_xCBvk","title":"Star Wars: Ahsoka Medley - Post Show Version (Piano Cover)","views":"355 views","published":"2 years ago","cat":"sw"},{"id":"IiI3B9HzySA","title":"Hallelujah, Praise Jehovah (Lyrics Only) - Piano Cover","views":"202 views","published":"2 years ago","cat":"hymn"},{"id":"WloJOFqGZCQ","title":"The Steadfast Love of The Lord Never Ceases (Lyrics Only) - Piano Cover","views":"759 views","published":"2 years ago","cat":"hymn"},{"id":"prYKE0bOMiw","title":"Notes On The Staff: Ahsoka End Credits","views":"86 views","published":"2 years ago","cat":"sw"},{"id":"aDt5s9ShUrQ","title":"9 Christian Hymns on Piano with Lyrics (Background Hymns Vol. 9)","views":"604 views","published":"2 years ago","cat":"hymn"},{"id":"3JbPXKh1i0o","title":"Star Wars: Ahsoka End Credits (Piano Cover)","views":"1.3K views","published":"2 years ago","cat":"sw"},{"id":"wCsGlJ8y99k","title":"Blessed Assurance (Lyrics Only) - Piano Cover","views":"256 views","published":"2 years ago","cat":"hymn"},{"id":"d6h3q-yBT1Y","title":"Star Wars: Duel of The Fates (Piano Cover)","views":"727 views","published":"2 years ago","cat":"sw"},{"id":"A2zfumSQWZ0","title":"Come, Oh Redeemer, Come - Piano Cover with Lyrics","views":"387 views","published":"2 years ago","cat":"hymn"},{"id":"ttrKm0mMh7I","title":"Channel Update (Sept. 9) - Schedule Changes & Upcoming Videos","views":"45 views","published":"2 years ago","cat":"other"},{"id":"EYtV3jWmBYU","title":"Star Wars: Sabine's Theme X Force Theme (Piano Cover)","views":"353 views","published":"2 years ago","cat":"sw"},{"id":"lvtXlH5LEAQ","title":"All Hail The Power of Jesus' Name - Piano Cover with Lyrics","views":"2.3K views","published":"2 years ago","cat":"hymn"},{"id":"--KOfkQBCRg","title":"Star Wars: Thrawn's Theme (Piano/Orchestra Cover)","views":"751 views","published":"3 years ago","cat":"sw"},{"id":"nwMz5YzJAgw","title":"O Bless The Lord, My Soul (Psalm 103) - Piano Cover with Lyrics","views":"1.1K views","published":"3 years ago","cat":"hymn"},{"id":"fAcnNjTBO1c","title":"Star Wars: Ahsoka's Theme (Piano/Orchestra Cover)","views":"716 views","published":"3 years ago","cat":"sw"},{"id":"kpuMcrjiJXg","title":"9 Relaxing Hymns on Piano with Lyrics and Audio only","views":"224 views","published":"3 years ago","cat":"hymn"},{"id":"BWrCia21L7Y","title":"Star Wars: Thrawn's Theme (Piano Cover)","views":"3.6K views","published":"3 years ago","cat":"sw"},{"id":"lYBNQOQBVYI","title":"Change My Heart, Oh God - Piano Cover with Lyrics","views":"954 views","published":"3 years ago","cat":"hymn"},{"id":"8f8di3z2hvM","title":"Star Wars: Sabine Wren's Theme (Piano Cover)","views":"2.1K views","published":"3 years ago","cat":"sw"},{"id":"bBTh7StAmsg","title":"9 Relaxing Hymns on Instrumental Piano (Background Hymns Vol. 8) #christianpianomusic","views":"147 views","published":"3 years ago","cat":"hymn"},{"id":"PVZAK-67Vt0","title":"Star Wars: The Force Theme (Piano Cover)","views":"1K views","published":"3 years ago","cat":"sw"},{"id":"LSsH3ZSYQOY","title":"Redeemed, How I Love To Proclaim It! - Piano Cover with Lyrics","views":"1.9K views","published":"3 years ago","cat":"hymn"},{"id":"T3-YXXkwDLg","title":"The Mandalorian Theme on Piano (Star Wars)","views":"268 views","published":"3 years ago","cat":"sw"},{"id":"Hq6HaQ9AqM8","title":"11 Minutes of Piano Hymns for Relaxation (Background Hymns Vol. 7)","views":"521 views","published":"3 years ago","cat":"hymn"},{"id":"dMznPA_Q5_U","title":"I Love Thy Kingdom, Lord - Piano Cover with Lyrics","views":"1.9K views","published":"3 years ago","cat":"hymn"},{"id":"hsRAWcIqYR0","title":"Star Wars: Ahsoka Medley - Pre-Show Version (Piano Cover)","views":"286 views","published":"3 years ago","cat":"sw"},{"id":"UQm1kyAsKyg","title":"12 Minutes of Calm Instrumental Piano Hymns (With Lyrics) - Background Hymns Vol. 6","views":"309 views","published":"3 years ago","cat":"hymn"},{"id":"K8TBeQYBVCk","title":"Star Wars: The Throne Room (Piano/Orchestra Cover)","views":"210 views","published":"3 years ago","cat":"sw"},{"id":"ouxI__3J3Gc","title":"How Great Thou Art - Piano Cover with Lyrics","views":"27K views","published":"3 years ago","cat":"hymn"},{"id":"AmfHUGEdc98","title":"Channel Trailer","views":"113 views","published":"3 years ago","cat":"other"},{"id":"maTRc0HekvY","title":"Star Wars: The Throne Room (Piano Cover)","views":"787 views","published":"3 years ago","cat":"sw"},{"id":"RBuGut8du8E","title":"10 Minutes of Background Hymns on Piano with Onscreen Lyrics (Background Hymns Vol. 5)","views":"2.5K views","published":"3 years ago","cat":"hymn"},{"id":"E-k-kdJqipQ","title":"Star Wars: Battle of the Heroes (Piano Cover)","views":"738 views","published":"3 years ago","cat":"sw"},{"id":"4S4CcsnjIK0","title":"The Steadfast Love of The Lord Never Ceases - Piano Cover with Lyrics","views":"2.2K views","published":"3 years ago","cat":"hymn"},{"id":"YHBlnsSMBA4","title":"Star Wars: Ahsoka's Theme (Piano Cover)","views":"1K views","published":"3 years ago","cat":"sw"},{"id":"cS0hK5DlsY0","title":"10 Minutes of Resurrection/Easter Hymns on Piano With Onscreen Lyrics (Background Hymns Vol. 4)","views":"103 views","published":"3 years ago","cat":"hymn"},{"id":"y4BZMKzaMSY","title":"Star Wars: The Book of Boba Fett Theme (Piano Cover)","views":"131 views","published":"3 years ago","cat":"sw"},{"id":"Zvhvi7ujeXk","title":"Hymn Medleys (Background Hymns Vol. 1-3) | 1 Hour Mix","views":"73 views","published":"3 years ago","cat":"hymn"},{"id":"WkeQRTQdxEE","title":"6 Minutes of Relaxing Instrumental Hymns on Piano with Lyrics (Background Hymns Vol. 3)","views":"832 views","published":"3 years ago","cat":"hymn"},{"id":"iJMfDSymy8U","title":"When Trials Come - Piano Cover with Lyrics","views":"538 views","published":"3 years ago","cat":"hymn"},{"id":"a6WsDFWFmgw","title":"Star Wars: Gar Saxon Suite (Ray Stevenson Tribute Piano Cover)","views":"365 views","published":"3 years ago","cat":"sw"},{"id":"rQGAtzBgS0s","title":"Star Wars: Background Medley (Vol. 1) \u2013 Piano Covers","views":"188 views","published":"3 years ago","cat":"sw"},{"id":"xB8gdSprg24","title":"Over 10 Minutes of Calm Piano Hymns (Background Hymns Vol. 2) #relaxinghymns #christianpianomusic","views":"1.5K views","published":"3 years ago","cat":"hymn"},{"id":"lbomEVPeDCY","title":"Lift High The Cross - Piano Cover with Lyrics","views":"461 views","published":"3 years ago","cat":"hymn"},{"id":"0Q9udO26lUY","title":"Star Wars: The Imperial March (Darth Vader's Theme) \u2013 Piano Cover","views":"4.6K views","published":"3 years ago","cat":"sw"},{"id":"heeJ8GoDt7Q","title":"10 Minutes of Relaxing Piano Hymns (Background Hymns Vol. 1)","views":"380 views","published":"3 years ago","cat":"hymn"},{"id":"uqKMvhuoTGo","title":"Star Wars Medley (Piano Cover) \u2013 May the 4th Special","views":"7.2K views","published":"3 years ago","cat":"sw"},{"id":"xNO-CgMUGBE","title":"In Christ Alone (Lyrics Only) - Piano Cover","views":"1.3K views","published":"3 years ago","cat":"hymn"},{"id":"Skkz_QLPAFQ","title":"Star Wars: Moff Gideon's Theme (Overhead Piano Cover)","views":"1K views","published":"3 years ago","cat":"sw"},{"id":"W9HJ7B9xJRA","title":"Let Us Love and Sing and Wonder - Piano Cover with Lyrics","views":"120 views","published":"3 years ago","cat":"other"},{"id":"E72tnL11__Q","title":"Doxology (Full Body Version) - Piano Cover with Lyrics","views":"738 views","published":"3 years ago","cat":"other"},{"id":"vI7AfCVROvM","title":"Christ Our Hope In Life and Death - Piano Cover with Lyrics","views":"1K views","published":"3 years ago","cat":"hymn"},{"id":"ycvJ1QaNhtg","title":"Star Wars: The Bad Batch Theme (Piano Cover)","views":"695 views","published":"3 years ago","cat":"sw"},{"id":"TmskobEJkRg","title":"Star Wars: The Book of Boba Fett Theme (Audio Only) - Piano Cover","views":"83 views","published":"3 years ago","cat":"sw"},{"id":"I14eqcyPoDw","title":"All Creatures of Our God and King (Lyrics Only) - Piano Cover","views":"68 views","published":"3 years ago","cat":"hymn"},{"id":"lMpXGOIxvlk","title":"Star Wars: Thrawn Theme (Audio Only) - Piano Cover","views":"950 views","published":"3 years ago","cat":"sw"},{"id":"oCEhw3x6pmk","title":"Glorious Things Of Thee Are Spoken (Lyrics Only) - Piano Cover","views":"121 views","published":"3 years ago","cat":"hymn"},{"id":"aA1oEOLOafc","title":"Star Wars: The Mandalorian Theme X Bad Batch Theme (Piano Tutorial)","views":"272 views","published":"3 years ago","cat":"sw"},{"id":"5eLNz4YOgZc","title":"Behold Our God (Lyrics Only) - Piano Cover","views":"588 views","published":"3 years ago","cat":"hymn"},{"id":"uwdJ2bRPwJ8","title":"Jesus Paid It All (Lyrics Only) - Piano Cover","views":"870 views","published":"3 years ago","cat":"hymn"},{"id":"fZISSyv2Rb8","title":"Not What My Hands Have Done (Lyrics Only) - Piano Cover","views":"418 views","published":"3 years ago","cat":"other"},{"id":"XUaWLktRGy8","title":"How to Play Moff Gideon's Theme on Piano (Tutorial) - The Mandalorian","views":"1K views","published":"3 years ago","cat":"sw"},{"id":"yQ6CsT-ycPo","title":"Come, Christians, Join To Sing (Lyrics Only) - Piano Cover","views":"60 views","published":"3 years ago","cat":"hymn"},{"id":"qWjT7WHN-Mo","title":"Star Wars: The Emperor's Theme (Piano Cover)","views":"3.3K views","published":"3 years ago","cat":"sw"},{"id":"5CwldKLtS7w","title":"Star Wars: Clone Theme X Bad Batch (Piano Cover)","views":"1K views","published":"3 years ago","cat":"sw"},{"id":"i6LotyiHmnc","title":"Who Is On The Lord's Side? - Piano Cover with Lyrics","views":"626 views","published":"3 years ago","cat":"hymn"},{"id":"dfrWhVrr-_A","title":"The Heavens Declare Thy Glory (Psalm 19) - Piano Cover with Lyrics","views":"282 views","published":"3 years ago","cat":"hymn"},{"id":"8fu9gnu8Q3U","title":"Top 10 Psalms - Piano Covers with Lyrics","views":"57 views","published":"3 years ago","cat":"hymn"},{"id":"ohnmaJk2Np8","title":"Psalm 121 (I Lift My Eyes) - Piano Tutorial","views":"508 views","published":"3 years ago","cat":"hymn"},{"id":"OCBu6yVJYHI","title":"Psalm 121 (I Lift My Eyes) - Piano Cover with Lyrics","views":"948 views","published":"3 years ago","cat":"hymn"},{"id":"GqFsh3yEr04","title":"O Worship The King (Psalm 104) - Piano Cover with Lyrics","views":"78 views","published":"3 years ago","cat":"hymn"},{"id":"sFMEvkh1HBE","title":"The Mandalorian Theme \u2013 Piano (Overhead Camera Cover)","views":"669 views","published":"3 years ago","cat":"sw"},{"id":"h4BLJDU20uc","title":"My Soul Finds Rest (Psalm 62) - Piano Cover with Lyrics","views":"570 views","published":"3 years ago","cat":"hymn"},{"id":"WKdpCwy5WUM","title":"Star Wars Piano: Dark Side Mashup (Snippets Vol 2) \u2013 Ft. Noah Tracey!","views":"303 views","published":"3 years ago","cat":"sw"},{"id":"VsZY1KeK_MI","title":"A Mighty Fortress Is Our God - Piano Cover with Lyrics","views":"208 views","published":"3 years ago","cat":"hymn"},{"id":"ynpvoN3FJNo","title":"How Deep The Father's Love For Us (Lyrics Only) - Piano Cover","views":"1.1K views","published":"3 years ago","cat":"hymn"},{"id":"su9WnOeuJyg","title":"Star Wars: Main Theme (Piano Cover)","views":"33K views","published":"3 years ago","cat":"sw"},{"id":"Hftir3bytnI","title":"Hallelujah, Praise Jehovah (Psalm 148) - Piano Cover with Lyrics","views":"493 views","published":"3 years ago","cat":"hymn"},{"id":"FV4IchLpfvw","title":"Star Wars: Rey's Theme (Piano Cover)","views":"371 views","published":"3 years ago","cat":"sw"},{"id":"UzEXX0g-jyA","title":"All Glory Be to Christ (Lyrics Only) - Piano Cover","views":"733 views","published":"3 years ago","cat":"hymn"},{"id":"Dykyjmsz2cQ","title":"Hallelujah, Praise Jehovah, O My Soul (Psalm 146) - Piano Cover with Lyrics","views":"647 views","published":"3 years ago","cat":"hymn"},{"id":"MLaZ4SMunXc","title":"Star Wars: Yoda's Theme - Piano Cover","views":"1.1K views","published":"3 years ago","cat":"sw"},{"id":"iV57WchEVpQ","title":"God Is Our Refuge And Our Strength (Psalm 46) - Piano Cover With Lyrics","views":"700 views","published":"3 years ago","cat":"hymn"},{"id":"tKrBXl0PXmI","title":"Gloria Patri (Glory Be to the Father) - Lyrics Only","views":"5.4K views","published":"3 years ago","cat":"hymn"},{"id":"iC8WIkq5I-s","title":"Joy Has Dawned - Piano Cover with Lyrics","views":"1.1K views","published":"3 years ago","cat":"other"},{"id":"hpAC9uzM-uw","title":"Star Wars Piano: Clone Wars Mashup  (Snippets Vol 1)","views":"267 views","published":"3 years ago","cat":"sw"},{"id":"fXIGzX6ncFA","title":"Hark! The Herald Angels Sing - Piano Cover with Lyrics (Dark Background Test Video # 3)","views":"164 views","published":"3 years ago","cat":"hymn"},{"id":"JBay9tRTsI0","title":"Speak, O Lord - Piano Cover with Lyrics (Dark Background Test Video # 2)","views":"382 views","published":"3 years ago","cat":"hymn"},{"id":"7IvnLVy-vco","title":"Top 10 Hymns of Guidance - Piano Covers with Lyrics","views":"32 views","published":"3 years ago","cat":"hymn"},{"id":"1Cg6rlq6U1k","title":"O Church, Arise - Piano Cover with Lyrics","views":"2.7K views","published":"3 years ago","cat":"hymn"},{"id":"VJ8zD8JnN5U","title":"Amazing Grace - Piano Cover with Lyrics (Dark Background Test Video # 1)","views":"141 views","published":"3 years ago","cat":"hymn"},{"id":"-gNYLjzgumc","title":"My Shepherd Will Supply My Need (Psalm 23) - Piano Cover with Lyrics","views":"140 views","published":"3 years ago","cat":"hymn"},{"id":"vUklthnPBuw","title":"My Hope Rests Firm - Piano Cover with Lyrics","views":"124 views","published":"3 years ago","cat":"other"},{"id":"SN28IQE4H8Y","title":"Star Wars Musical Moments - Epic Star Wars Piano Covers","views":"304 views","published":"3 years ago","cat":"sw"},{"id":"2wDN_HVRHoA","title":"Savior, Like A Shepherd Lead Us - Piano Video with Lyrics","views":"494 views","published":"3 years ago","cat":"hymn"},{"id":"hR_HPsd3VfU","title":"Rejoice, Ye Pure in Heart - Piano Cover with Lyrics","views":"588 views","published":"3 years ago","cat":"hymn"},{"id":"dRswoFAeMxo","title":"He Leadeth Me: O Blessed Thought! - Piano Cover with Lyrics","views":"176 views","published":"3 years ago","cat":"hymn"},{"id":"oY85lufImxo","title":"Star Wars: The Force Theme (Piano Cover)","views":"187 views","published":"3 years ago","cat":"sw"},{"id":"FCWgQc4BzzA","title":"Jesus, Draw Me Ever Nearer - Piano Cover with Lyrics","views":"824 views","published":"3 years ago","cat":"hymn"},{"id":"QkaV0UiJGYA","title":"Guide Me, O Thou Great Jehovah - Piano Cover with Lyrics","views":"393 views","published":"3 years ago","cat":"other"},{"id":"ASeIqkyHIBE","title":"Doxology - Piano Cover with Lyrics","views":"24K views","published":"3 years ago","cat":"other"},{"id":"IvWCk3c9Glo","title":"Give Ear, God of My Righteousness (Psalm 4) - Piano Cover with Lyrics","views":"164 views","published":"3 years ago","cat":"hymn"},{"id":"D4xcmOc5yp4","title":"Star Wars: The Book of Boba Fett Theme (Piano Cover)","views":"108 views","published":"3 years ago","cat":"sw"},{"id":"hZy448WwHR8","title":"Channel Update (Community Page)","views":"23 views","published":"3 years ago","cat":"other"},{"id":"lFfp2U-Z0b8","title":"O Lord, How Many Are My Foes! (Psalm 3) - Piano Cover with Lyrics","views":"334 views","published":"3 years ago","cat":"hymn"},{"id":"4El-MnMqkXk","title":"Star Wars: Cantina Band (Piano Cover)","views":"139 views","published":"3 years ago","cat":"sw"},{"id":"-5dFmoGD_Fs","title":"Why Do Heathen Nations Rage? (Psalm 2) - Piano Cover with Lyrics","views":"126 views","published":"3 years ago","cat":"hymn"},{"id":"0MrGt7EXOwk","title":"Star Wars: Battle of the Heroes (Piano Cover)","views":"478 views","published":"3 years ago","cat":"sw"},{"id":"F0ERj9wp-Rw","title":"How Blest the Man (Psalm 1) - Piano Cover with Lyrics","views":"236 views","published":"3 years ago","cat":"hymn"},{"id":"vcoENRQzO2E","title":"Star Wars: Grand Admiral Thrawn's Theme (Piano Cover)","views":"798 views","published":"3 years ago","cat":"sw"},{"id":"IO5VOQ_t33s","title":"By Faith - Piano Cover with Lyrics","views":"1.7K views","published":"3 years ago","cat":"hymn"},{"id":"y3RI11wfj5w","title":"All Hail The Power of Jesus' Name - Piano Cover with Lyrics","views":"87 views","published":"3 years ago","cat":"hymn"},{"id":"mbFCCs-gICY","title":"Star Wars: Binary Sunset (The Force Theme) - Piano Cover","views":"100 views","published":"3 years ago","cat":"sw"},{"id":"bESj6bGeHR4","title":"Star Wars: The Clone Wars Theme (Piano Cover) - Overhead Version","views":"1.8K views","published":"3 years ago","cat":"sw"},{"id":"r7U2SAHHzA8","title":"Top 10 Hymns of Refuge - Piano Video","views":"60 views","published":"3 years ago","cat":"hymn"},{"id":"NMmCTl5ZhDY","title":"My Anchor Holds - Piano Cover with Lyrics","views":"785 views","published":"3 years ago","cat":"hymn"},{"id":"VcgE5D8LtuA","title":"My soul finds rest - Piano Cover with Lyrics","views":"187 views","published":"3 years ago","cat":"hymn"},{"id":"gdNBOmmuyq0","title":"Star Wars: Bad Batch Theme (Piano Cover)","views":"363 views","published":"3 years ago","cat":"sw"},{"id":"4zgxQ_PBiug","title":"Jesus! What A Friend for Sinners! - Piano Cover with Lyrics","views":"844 views","published":"3 years ago","cat":"hymn"},{"id":"KxUxe6VAnu8","title":"Take Shelter by Skye Peterson, Kristyn Getty and Ben Shive (Piano Cover)","views":"757 views","published":"4 years ago","cat":"hymn"},{"id":"P9I_ATqKf7k","title":"Who Trusts in God, A Strong Abode - Piano Cover With Lyrics","views":"55 views","published":"4 years ago","cat":"hymn"},{"id":"tlK64sys_KQ","title":"Our God, Our Help In Ages Past - Piano Cover With Lyrics","views":"91 views","published":"4 years ago","cat":"hymn"},{"id":"FAKipyDv-jY","title":"A Mighty Fortress Is Our God - Piano Tutorial","views":"136 views","published":"4 years ago","cat":"hymn"},{"id":"dd2M_WqtX3M","title":"A Shelter In The Time of Storm - Piano Cover With Lyrics","views":"464 views","published":"4 years ago","cat":"other"},{"id":"vgk3Ornbros","title":"A Mighty Fortress Is Our God - Piano Cover With Lyrics","views":"43 views","published":"4 years ago","cat":"hymn"},{"id":"JMprxnxKBgQ","title":"God Is Our Refuge And Our Strength - Piano Cover With Lyrics","views":"522 views","published":"4 years ago","cat":"hymn"},{"id":"t6frVFbp2bA","title":"In Christ Alone - Piano Cover with Lyrics","views":"294 views","published":"4 years ago","cat":"hymn"},{"id":"URMIkU9OfWo","title":"Abide With Me - Piano Cover with Lyrics","views":"99 views","published":"4 years ago","cat":"hymn"},{"id":"VQiOwGvpUuE","title":"My Hope is In The Lord - Piano Cover with Lyrics","views":"68 views","published":"4 years ago","cat":"hymn"},{"id":"98fhApYuOws","title":"His Mercy Is More - Piano Cover with Lyrics","views":"4K views","published":"4 years ago","cat":"hymn"},{"id":"7DT6yjSVoMU","title":"My Worth Is Not in What I Own","views":"248 views","published":"4 years ago","cat":"hymn"},{"id":"36770CGDitk","title":"Top 10 Hymns of Hope","views":"23 views","published":"4 years ago","cat":"hymn"},{"id":"dmFeSp2kHic","title":"Christ Our Hope In Life And Death - Piano Cover with Lyrics","views":"1K views","published":"4 years ago","cat":"hymn"},{"id":"MeuQtmU-Lps","title":"Nothing but the Blood - Piano Cover with Lyrics","views":"125 views","published":"4 years ago","cat":"hymn"},{"id":"s76wjS42nVE","title":"Be Thou My Vision - Piano Cover with Lyrics","views":"39 views","published":"4 years ago","cat":"hymn"},{"id":"kfnqvN_7wK4","title":"My Hope Is Built On Nothing Less - Piano Cover With Lyrics","views":"55 views","published":"4 years ago","cat":"other"},{"id":"VSwadm04LpE","title":"Great Is Thy Faithfulness - Piano Cover with Lyrics","views":"45 views","published":"4 years ago","cat":"hymn"},{"id":"oDxc4fJzbG0","title":"Beneath The Cross Of Jesus - Piano Video with Lyrics","views":"105 views","published":"4 years ago","cat":"hymn"},{"id":"evctWBz8xXg","title":"Top 10 Hymns About Christ's Suffering","views":"33 views","published":"4 years ago","cat":"hymn"},{"id":"TmIZbUAAFGk","title":"When I Survey The Wondrous Cross - Piano Video with Lyrics","views":"47 views","published":"4 years ago","cat":"hymn"},{"id":"Tdjk3gf7mHk","title":"O Sacred Head, Now Wounded - Piano Video With Lyrics","views":"64 views","published":"4 years ago","cat":"hymn"},{"id":"EMtekuWGVfo","title":"How Deep The Father's Love for Us - Piano Video with Lyrics","views":"559 views","published":"4 years ago","cat":"hymn"},{"id":"86HsmsLVDSk","title":"Beneath the Cross - Piano Video with Lyrics","views":"244 views","published":"4 years ago","cat":"hymn"},{"id":"0iQIjd4J6FU","title":"Man Of Sorrows! What A Name","views":"41 views","published":"4 years ago","cat":"hymn"},{"id":"qabhu_UhZfU","title":"Behold The Lamb (Communion Hymn) - Piano Video with Lyrics","views":"1.6K views","published":"4 years ago","cat":"hymn"},{"id":"m52nyyqSD9M","title":"Beneath The Cross Of Jesus - Piano Tutorial","views":"249 views","published":"4 years ago","cat":"hymn"},{"id":"OYUf86IB89E","title":"Stricken, Smitten and Afflicted","views":"109 views","published":"4 years ago","cat":"other"},{"id":"IojqvS_9Ms4","title":"Beneath The Cross - Piano Tutorial","views":"88 views","published":"4 years ago","cat":"hymn"},{"id":"BOYoqPwCMB4","title":"Behold The Lamb (Communion Hymn) - Piano Tutorial","views":"1.7K views","published":"4 years ago","cat":"hymn"},{"id":"PCFiojBZX3Y","title":"Alas! And Did My Savior Bleed","views":"46 views","published":"4 years ago","cat":"hymn"},{"id":"yIeOzP1gM1E","title":"Welcome! Videos Released on Sundays!","views":"25 views","published":"4 years ago","cat":"other"},{"id":"KyPJ_U6-gj8","title":"Alas! And Did My Savior Bleed - Piano Tutorial","views":"253 views","published":"4 years ago","cat":"hymn"},{"id":"2QOAEjXBLxE","title":"There Is A Fountain Filled With Blood","views":"48 views","published":"4 years ago","cat":"hymn"},{"id":"jOILlyItBFo","title":"Come Behold The Wondrous Mystery - Piano","views":"1.1K views","published":"4 years ago","cat":"other"},{"id":"9A6bM6QIq9A","title":"God, All Nature Sings Thy Glory","views":"197 views","published":"4 years ago","cat":"hymn"},{"id":"GNt5eAMfB-c","title":"I Will Sing of My Redeemer","views":"61 views","published":"4 years ago","cat":"hymn"},{"id":"LEoyVZvqaaY","title":"Wondrous King, All-Glorious","views":"65 views","published":"4 years ago","cat":"hymn"},{"id":"7PXP0MRXOgM","title":"What Wondrous Love Is This","views":"21 views","published":"4 years ago","cat":"other"},{"id":"6staXJ9oCn8","title":"The Heavens Declare Thy Glory","views":"35 views","published":"4 years ago","cat":"hymn"},{"id":"2qEqd8Ddbj4","title":"He Will Hold Me Fast","views":"26 views","published":"4 years ago","cat":"other"},{"id":"QseaAvAUDcE","title":"Top 10 Hymns About God's Love","views":"39 views","published":"4 years ago","cat":"hymn"},{"id":"SvVor8B_E4c","title":"This Is My Father's World","views":"44 views","published":"4 years ago","cat":"hymn"},{"id":"bAeA2jNm9kY","title":"For The Beauty Of The Earth","views":"32 views","published":"4 years ago","cat":"other"},{"id":"sEMRAbvZ32o","title":"Hallelujah, Praise Jehovah","views":"47 views","published":"4 years ago","cat":"hymn"},{"id":"tpm3lb42Zeg","title":"Though Troubles Assail Us","views":"219 views","published":"4 years ago","cat":"other"},{"id":"uEjjfiRWPbg","title":"I Sing the Almighty Power of God","views":"26 views","published":"4 years ago","cat":"hymn"},{"id":"ooN3q46hiDc","title":"The Love of God","views":"11 views","published":"4 years ago","cat":"hymn"},{"id":"Qq4SGtZf4ww","title":"Come Unto Me","views":"27 views","published":"4 years ago","cat":"other"},{"id":"_RhaavbVKgw","title":"Behold Our God","views":"754 views","published":"4 years ago","cat":"hymn"},{"id":"oElZZuUccBo","title":"Across The Lands - Piano","views":"626 views","published":"4 years ago","cat":"hymn"},{"id":"lR_GkH0GqhQ","title":"Creations Sings - Piano","views":"505 views","published":"4 years ago","cat":"other"},{"id":"mIx0oC_b3eo","title":"Top 10 Creation Hymns","views":"45 views","published":"4 years ago","cat":"hymn"},{"id":"0hXsPhGuKwU","title":"When Morning Gilds The Skies - Piano","views":"111 views","published":"4 years ago","cat":"hymn"},{"id":"vexanChQ1pw","title":"Be Thou My Vision - Piano","views":"35 views","published":"4 years ago","cat":"hymn"},{"id":"q0JgNbuEQxE","title":"Glorious Things Of Thee Are Spoken - Piano","views":"43 views","published":"4 years ago","cat":"hymn"},{"id":"egy6RrLD3L8","title":"Top 10 Trinity Hymnal Hymns - Piano","views":"217 views","published":"4 years ago","cat":"hymn"},{"id":"AH1XAn-60qU","title":"Hallelujah, Praise Jehovah, O My Soul - Piano","views":"116 views","published":"4 years ago","cat":"hymn"},{"id":"7drJwOWqrU0","title":"My Anchor Holds - Piano","views":"171 views","published":"4 years ago","cat":"hymn"},{"id":"nmB44mE_IN0","title":"O Father, You Are Sovereign - Piano","views":"81 views","published":"4 years ago","cat":"hymn"},{"id":"t6_eaP5Y3w0","title":"Praise, My Soul, the King of Heaven - Piano","views":"37 views","published":"4 years ago","cat":"hymn"},{"id":"uAlZx42nQCY","title":"His Mercy Is More - Piano","views":"354 views","published":"4 years ago","cat":"hymn"},{"id":"dme1t0OKPu0","title":"Come Behold The Wondrous Mystery - Piano","views":"90 views","published":"4 years ago","cat":"other"},{"id":"HLjsMQwwf_A","title":"Top 10 Hymns - 2022 Edition - Piano","views":"144 views","published":"4 years ago","cat":"hymn"},{"id":"17PrwoGRcBY","title":"O Church, Arise - Piano","views":"164 views","published":"4 years ago","cat":"hymn"},{"id":"CXQjzYOHAzk","title":"A Mighty Fortress Is Our God - Piano","views":"50 views","published":"4 years ago","cat":"hymn"},{"id":"qkrivgfNATk","title":"How Sweet and Awesome Is The Place - Piano","views":"386 views","published":"4 years ago","cat":"other"},{"id":"6nDv5SVaLIs","title":"All Glory Be to Christ","views":"508 views","published":"4 years ago","cat":"hymn"},{"id":"Hay4eWGsumk","title":"There Is A Fountain Filled With Blood","views":"264 views","published":"4 years ago","cat":"hymn"},{"id":"0WUE5LcEphU","title":"Christ Our Hope In Life and Death","views":"54 views","published":"4 years ago","cat":"hymn"},{"id":"G9IjX9JZOzE","title":"How Deep The Father's Love for Us","views":"32 views","published":"4 years ago","cat":"hymn"},{"id":"-sOALXPaQuo","title":"Resurrection Hymn","views":"57 views","published":"4 years ago","cat":"hymn"},{"id":"UFooZ-5NUwc","title":"All Praise To Thee, My God, This Night (Lyrics Only)","views":"184 views","published":"4 years ago","cat":"hymn"},{"id":"mj7bRrlyn4Y","title":"God Himself Is With Us","views":"206 views","published":"4 years ago","cat":"hymn"},{"id":"fQO4oByWnYw","title":"Good Shepherd of My Soul","views":"217 views","published":"4 years ago","cat":"hymn"},{"id":"v1bNos6Xbj8","title":"Before The Throne of God Above","views":"58 views","published":"4 years ago","cat":"hymn"},{"id":"m2OZ9A5KDxE","title":"Blessed Lord, In Thee is Refuge","views":"171 views","published":"4 years ago","cat":"hymn"},{"id":"sVcl1SDk1U0","title":"All Creatures of Our God and King","views":"51 views","published":"4 years ago","cat":"hymn"},{"id":"b49Fw_zMC9w","title":"My Shepherd Will Supply My Need","views":"92 views","published":"4 years ago","cat":"hymn"},{"id":"HCZyc8EvT1M","title":"O Great God","views":"94 views","published":"4 years ago","cat":"hymn"},{"id":"4OGKMnx_mIA","title":"Fairest Lord Jesus","views":"49 views","published":"4 years ago","cat":"hymn"},{"id":"xRNUxT5U8bY","title":"Jesus, Draw Me Ever Nearer","views":"105 views","published":"4 years ago","cat":"hymn"},{"id":"9yy6RHe-KAk","title":"He Is Exalted","views":"45 views","published":"4 years ago","cat":"other"},{"id":"t4HtgKJhMZM","title":"O Worship The King","views":"39 views","published":"4 years ago","cat":"hymn"},{"id":"6hSawbxXwv4","title":"O The Deep, Deep Love of Jesus","views":"67 views","published":"4 years ago","cat":"hymn"},{"id":"2Zi2prQrFJE","title":"Still, My Soul, Be Still","views":"29 views","published":"4 years ago","cat":"hymn"},{"id":"TJbEhHX_gDc","title":"Gloria Patri","views":"1K views","published":"4 years ago","cat":"other"},{"id":"SMjXbTfiHlA","title":"Rejoice the Lord Is King","views":"52 views","published":"4 years ago","cat":"hymn"},{"id":"JNZM6B4xpng","title":"All I Have Is Christ","views":"38 views","published":"4 years ago","cat":"hymn"},{"id":"LpAsGr7zSH4","title":"How Great Thou Art","views":"100 views","published":"4 years ago","cat":"hymn"},{"id":"WExjrhH5V7Y","title":"Abide With Me (W/O Lyrics)","views":"21 views","published":"4 years ago","cat":"hymn"},{"id":"fMWluBjvmDQ","title":"Come Unto Me (W/O Lyrics)","views":"79 views","published":"4 years ago","cat":"other"},{"id":"I_-TCrGISGA","title":"To God Be the Glory","views":"86 views","published":"4 years ago","cat":"hymn"},{"id":"Jrz72FLPd9M","title":"Forever Jesus (W/O Lyrics)","views":"89 views","published":"4 years ago","cat":"hymn"},{"id":"SIkeh5myaCM","title":"There Is A Fountain Filled with Blood (Lyrics Only)","views":"317 views","published":"4 years ago","cat":"hymn"},{"id":"notEToZA89A","title":"May The Mind of Christ My Savior (Lyrics Only)","views":"778 views","published":"4 years ago","cat":"hymn"},{"id":"59arfX09A8g","title":"Holy Spirit","views":"23 views","published":"4 years ago","cat":"hymn"},{"id":"PZG4qOVMuAc","title":"Behold The Lamb (Communion Hymn)","views":"94 views","published":"4 years ago","cat":"hymn"},{"id":"IJQNayoyfos","title":"A Shelter In The Time of Storm (W/O Lyrics)","views":"33 views","published":"4 years ago","cat":"other"},{"id":"idlksNI81jM","title":"I Sing the Almighty Power of God","views":"37 views","published":"4 years ago","cat":"hymn"},{"id":"aZdDPLi2kQY","title":"It Is Well With My Soul (Lyrics Only)","views":"1K views","published":"4 years ago","cat":"hymn"},{"id":"xG5sEaTbRng","title":"Who Trusts in God, A Strong Abode (Lyrics Only)","views":"211 views","published":"4 years ago","cat":"hymn"},{"id":"RPEBTmFTqzg","title":"The Risen Christ","views":"79 views","published":"4 years ago","cat":"hymn"},{"id":"v0YXMBYtc0c","title":"By Faith","views":"15 views","published":"4 years ago","cat":"hymn"},{"id":"TwHMPpv_9xQ","title":"When Trials Come","views":"48 views","published":"4 years ago","cat":"hymn"},{"id":"H8Slos2JTCs","title":"Let Us With A Gladsome Mind (Lyrics Only)","views":"545 views","published":"4 years ago","cat":"other"},{"id":"_0TTc6ysjBk","title":"Praise to the Lord the Almighty","views":"68 views","published":"4 years ago","cat":"hymn"},{"id":"K6F-9v1oULo","title":"There is A Redeemer","views":"31 views","published":"4 years ago","cat":"hymn"},{"id":"hed3wjqN2Pc","title":"I Heard the Voice of Jesus Say","views":"91 views","published":"4 years ago","cat":"hymn"},{"id":"7vVqMNcVu-k","title":"Now Blessed Be The Lord Our God/Amazing Grace","views":"55 views","published":"4 years ago","cat":"hymn"},{"id":"vOiApMR_11E","title":"Praise the Savior, Ye Who Know Him!","views":"152 views","published":"4 years ago","cat":"hymn"},{"id":"IM-xYy_nJxc","title":"My Worth Is Not in What I Own","views":"45 views","published":"4 years ago","cat":"hymn"},{"id":"IqP9SM-5-Qw","title":"Crown Him With Many Crowns","views":"59 views","published":"4 years ago","cat":"hymn"},{"id":"_JG_Ll21pwM","title":"My soul finds rest","views":"60 views","published":"4 years ago","cat":"hymn"},{"id":"tMjwbSVrqKc","title":"Teach Me, Lord, To Wait","views":"1.4K views","published":"4 years ago","cat":"hymn"},{"id":"q__OS-0Jsm4","title":"The Steadfast Love of the Lord Never Ceases","views":"889 views","published":"4 years ago","cat":"hymn"},{"id":"vyZORyiIY_E","title":"Be Thou My Vision","views":"58 views","published":"4 years ago","cat":"hymn"},{"id":"vJwjibRXALI","title":"Amazing Grace","views":"31 views","published":"4 years ago","cat":"hymn"},{"id":"kdZW2LP5SzY","title":"He Will Hold Me Fast","views":"20 views","published":"4 years ago","cat":"other"},{"id":"t7gUnk8mfcY","title":"Doxology (Lyrics Only)","views":"1.2K views","published":"4 years ago","cat":"other"},{"id":"ZPbEGEBLOSo","title":"For the Cause","views":"192 views","published":"4 years ago","cat":"other"},{"id":"mI47zDRUjTE","title":"My Hope Is Built On Nothing Less","views":"125 views","published":"4 years ago","cat":"other"},{"id":"KJUsvHEW81s","title":"Speak O Lord","views":"28 views","published":"4 years ago","cat":"hymn"},{"id":"eqTwyFEg05U","title":"Praise My Soul the King of Heaven","views":"69 views","published":"4 years ago","cat":"hymn"},{"id":"xwLYzrNq0ds","title":"O Sacred Head, Now Wounded","views":"41 views","published":"4 years ago","cat":"hymn"},{"id":"l3v7D3jPepw","title":"O Love That Will Not Let Me Go","views":"23 views","published":"4 years ago","cat":"other"},{"id":"6Y79p0VBjEM","title":"Not What My Hands Have Done","views":"200 views","published":"4 years ago","cat":"other"},{"id":"aeD7tXx_bvM","title":"Spirit of God, Descend upon My Heart","views":"84 views","published":"4 years ago","cat":"hymn"},{"id":"57-6itSiLAk","title":"Hallelujah, Praise Jehovah","views":"78 views","published":"4 years ago","cat":"hymn"},{"id":"k-fHR70bs1A","title":"Behold Our God","views":"50 views","published":"4 years ago","cat":"hymn"},{"id":"58N9y4PHQO0","title":"Guess This Star Wars Song on Piano","views":"413 views","published":"Shorts","cat":"sw"},{"id":"xADTSsssevY","title":"Guess The Star Wars Theme! #starwars  #starwarsmusic  #starwarspiano #piano","views":"717 views","published":"Shorts","cat":"sw"},{"id":"oHkZZbWWfkY","title":"Guess the Hymn Quiz #1","views":"323 views","published":"Shorts","cat":"hymn"},{"id":"V4uaZgxFYDQ","title":"Guess The Star Wars Theme #7! #starwars  #starwarsmusic  #starwarspiano","views":"497 views","published":"Shorts","cat":"sw"},{"id":"iVvYtIhjQZ4","title":"Guess The Star Wars Theme #6! #starwars  #starwarsmusic     #starwarspiano","views":"955 views","published":"Shorts","cat":"sw"},{"id":"5qYQ6zzw2Vw","title":"Guess The Star Wars Theme #5! #starwars #starwarsmusic    #starwarspiano","views":"1.1K views","published":"Shorts","cat":"sw"},{"id":"swlJhtQdA3w","title":"Guess The Star Wars Theme #4! #starwars  #starwarsmusic   #starwarspiano","views":"1.3K views","published":"Shorts","cat":"sw"},{"id":"G1nCJ_2_l4o","title":"Guess The Star Wars Theme #3! #starwars  #starwarsmusic   #starwarspiano","views":"156 views","published":"Shorts","cat":"sw"},{"id":"l19jhILYwJI","title":"Guess The Star Wars Theme #2! #starwars  #starwarsmusic  #starwarspiano","views":"1.5K views","published":"Shorts","cat":"sw"},{"id":"3izXFfH-SkI","title":"Guess The Star Wars Theme! #starwars #starwarsmusic #starwarspiano","views":"1.2K views","published":"Shorts","cat":"sw"},{"id":"jiIrxG4zyhg","title":"#niamos from #andor on #piano !","views":"323 views","published":"Shorts","cat":"sw"},{"id":"qLFNSlyKGuc","title":"When Trials Come on #piano (A #hymn about God and this life)","views":"1.1K views","published":"Shorts","cat":"hymn"},{"id":"VRBi7mC-X-c","title":"#starwars Binary Sunset #pianomusic #theforcetheme #starwarsmusic","views":"290 views","published":"Shorts","cat":"other"},{"id":"NRszf5gKggM","title":"Boba Fett\u2019s Epic Theme from #themandalorian #piano","views":"677 views","published":"Shorts","cat":"sw"},{"id":"nf6_nxgY590","title":"#howtoplay #starwars Theme & #20thcenturystudios Fanfare! on #piano","views":"1K views","published":"Shorts","cat":"other"},{"id":"IlNhnqvuAmA","title":"A Calm Hymn to Prepare for God's Word (Speak O Lord) #pianocover","views":"909 views","published":"Shorts","cat":"hymn"},{"id":"NUcFRc6r-ZQ","title":"Psalm 62 on Piano! #pianomusic #shorts #psalm62","views":"315 views","published":"Shorts","cat":"hymn"},{"id":"TSilJuzwBFQ","title":"Help me get to 1000 Subscribers! #channelgrowth","views":"62 views","published":"Shorts","cat":"other"},{"id":"hlDL7uUwCdQ","title":"When Director Krennic shows up to your party #piano #andor #starwarsmusic","views":"233 views","published":"Shorts","cat":"sw"},{"id":"aRlHBoWowFk","title":"When the ISB attacks your Planet #andor #pianomusic","views":"578 views","published":"Shorts","cat":"sw"},{"id":"JQFR1kywzlk","title":"#cassianandor Theme on #piano #starwarsmusic Ready for more!","views":"166 views","published":"Shorts","cat":"sw"},{"id":"koQ6VV-eLiE","title":"When I Survey the Wondrous Cross o #piano #christianpianomusic #hymns","views":"201 views","published":"Shorts","cat":"hymn"},{"id":"axva-CLwlW0","title":"Cad Bane\u2019s Theme on #piano #cadbane #starwarsmusic #starwarspiano","views":"363 views","published":"Shorts","cat":"other"},{"id":"_3FMjQomp_g","title":"Holy, Holy, Holy on #piano #christianpianomusic #christianhymns","views":"276 views","published":"Shorts","cat":"hymn"},{"id":"Tz9vLy2wOjE","title":"He is Exalted On Piano #pianocover #worshipmusic","views":"287 views","published":"Shorts","cat":"hymn"},{"id":"wkt917hAeWI","title":"Star Wars: Dark Trooper Theme & CX Clone Theme #pianomashup #themandalorian #badbatch #pianocover","views":"159 views","published":"Shorts","cat":"sw"},{"id":"me5ACiKiIgI","title":"My Hope is Built on Nothing Less on #piano #christianpianomusic  #pianomusic #hymns","views":"195 views","published":"Shorts","cat":"hymn"},{"id":"y-OJiy-a2zo","title":"Star Wars: Ahsoka's Theme on #piano #starwarsmusic #ahsoka #kevinkiner #pianomusic #clonewars","views":"51 views","published":"Shorts","cat":"sw"},{"id":"vLlY8B8_OWI","title":"Star Wars: Skeleton Crew Main Theme #skeletoncrew #starwarsmusic #pianocover #pianomusic","views":"111 views","published":"Shorts","cat":"sw"},{"id":"KYS-azLYWwg","title":"A Mighty Fortress Is Our God on #piano #pianomusic #christianpianomusic #christianhymns","views":"123 views","published":"Shorts","cat":"hymn"},{"id":"b_X5o-DHzJQ","title":"Do you like #starwarsmusic? Check out my latest series! #pianomusic #starwarspiano #badbatch","views":"47 views","published":"Shorts","cat":"other"},{"id":"q2aqukw3uKE","title":"In Christ Alone #pianomusic #gettymusic #christianpianomusic #hymns #pianocover","views":"213 views","published":"Shorts","cat":"hymn"},{"id":"MpRPyyrOaJY","title":"Star Wars: Jod Na Nawood's Theme #starwarsmusic #pianocover #skeletoncrew #judelaw","views":"43 views","published":"Shorts","cat":"sw"},{"id":"0s-o4FSXdms","title":"How to Play How Great Thou Art (Easy Piano Tutorial) #howtoplaypiano  #pianomusic #hymns","views":"1K views","published":"Shorts","cat":"hymn"},{"id":"basueAsAXQE","title":"How to Play the Star Wars Theme & 20th Century Fanfare (Easy) #starwarspiano #starwarstheme","views":"619 views","published":"Shorts","cat":"sw"},{"id":"jcQYndoVUI0","title":"Coming Soon! #skeletoncrew #starwarsskeletoncrew #starwarspiano","views":"65 views","published":"Shorts","cat":"other"},{"id":"nnwNfTzkUPQ","title":"Nathan's Year In Review (2024) #myyearonyoutube2024","views":"22 views","published":"Shorts","cat":"other"},{"id":"ox_yqNQ_g8Q","title":"How To Play Emperor Palpatine's Theme (Easy Piano) #starwarsmusic #johnwilliams #emperorpalpatine","views":"4.6K views","published":"Shorts","cat":"sw"},{"id":"N0a03-BTmqY","title":"How To Play The Bad Batch Theme (Easy Piano) #starwarsmusic #kevinkiner #badbatch","views":"1.4K views","published":"Shorts","cat":"sw"},{"id":"TjjL7hC0T4A","title":"How To Play Thrawn's Theme (Easy Piano) #starwarsmusic #thrawn #grandadmiralthrawn #kevinkiner","views":"714 views","published":"Shorts","cat":"sw"},{"id":"8BjVDM7aGDg","title":"How to Play Crown Him With Many Crowns (Easy Piano) #pianomusic #howtoplay #pianotutorial #hymn","views":"456 views","published":"Shorts","cat":"hymn"},{"id":"Yfg4821OeOQ","title":"Year in Review 2023 #myyearonyoutube2023","views":"17 views","published":"Shorts","cat":"other"},{"id":"fRQPucr139c","title":"Come, Thou Long-Expected Jesus #christmascarols #pianomusic","views":"249 views","published":"Shorts","cat":"hymn"},{"id":"HpB0Zz2zDb0","title":"Star Wars: Thrawn's Theme X Carol of The Bells #pianomusic #starwarsmusic #christmasmusic","views":"201 views","published":"Shorts","cat":"sw"},{"id":"WT3g6dVu3m0","title":"Hark! The Herald Angels Sing! #pianomusic #christmascarols #christianmusic","views":"90 views","published":"Shorts","cat":"hymn"},{"id":"ODLE0qm8_pI","title":"Star Wars: Duel of the Fates (#ahsoka vs. #anakinskywalker) #pianomusic #starwarsmusic","views":"133 views","published":"Shorts","cat":"sw"},{"id":"dXDEUgB3k8U","title":"Jesus, I Am Resting, Resting #piano#hymn #christianmusic","views":"161 views","published":"Shorts","cat":"hymn"},{"id":"dcX3m_F9Oa0","title":"Behold Our God #pianomusic #sovereigngracemusic #hymn","views":"517 views","published":"Shorts","cat":"hymn"},{"id":"-DC3kfVBM-M","title":"Star Wars: Moff Gideon's Theme #starwarsmusic#moffgideon #ludwigg\u00f6ransson #themandalorian  #piano","views":"419 views","published":"Shorts","cat":"sw"},{"id":"uuqKY0Yx28E","title":"Star Wars: The Emperor  #pianomusic#starwars #johnwilliams #emperorpalpatine","views":"386 views","published":"Shorts","cat":"sw"},{"id":"WEd8I74s0eE","title":"A Sith Trooper plays the Imperial March #pianomusic #johnwilliams #starwars #sithtrooper","views":"248 views","published":"Shorts","cat":"sw"},{"id":"Lwhxbwsetcw","title":"Star Wars: Imperial March (Emotional Version)  #pianomusic#johnwilliams #starwars #darthvader","views":"184 views","published":"Shorts","cat":"sw"},{"id":"rCxSxNRnS3g","title":"Star Wars Theme (Samuel Kim Style) #starwarstheme #pianomusic#samuelkim","views":"379 views","published":"Shorts","cat":"sw"},{"id":"jmXNVwIOEkI","title":"The Steadfast Love of The Lord Never Ceases #pianomusic #scripturesongs #christianmusic","views":"473 views","published":"Shorts","cat":"hymn"},{"id":"yTlX8pBn45A","title":"His Mercy Is More #pianomusic #christianmusic #mattpapa #mattboswell","views":"330 views","published":"Shorts","cat":"hymn"},{"id":"t5Ym8f7ZNsA","title":"Sanctuary #pianomusic#scripturesongs #christianmusic","views":"48 views","published":"Shorts","cat":"hymn"},{"id":"4nC2UEtN0_Y","title":"Christ Is Mine Forevermore #pianomusic#cityalight #hymn","views":"533 views","published":"Shorts","cat":"hymn"},{"id":"b2iivCUGPS8","title":"Glory Be To The Father (Gloria Patri) #pianomusic#hymn","views":"650 views","published":"Shorts","cat":"hymn"},{"id":"WUz4FTiSHeo","title":"Star Wars: The Clone Theme #piano #pianomusic#kevinkiner #clonewars","views":"1.2K views","published":"Shorts","cat":"sw"},{"id":"Jgk9Y6QjKJU","title":"Star Wars: The Force Theme #theforcetheme #pianomusic#johnwilliams","views":"223 views","published":"Shorts","cat":"sw"},{"id":"H1gm4qCeOlE","title":"Star Wars: Sabine's Theme #ahsoka #pianomusic#kevinkiner #sabinewren","views":"275 views","published":"Shorts","cat":"sw"},{"id":"Yt78dlbTqFQ","title":"Star Wars: Ahsoka's Theme #ahsoka #pianomusic #kevinkiner #pianomusic","views":"242 views","published":"Shorts","cat":"sw"},{"id":"aC5FZ-YEhCo","title":"Star Wars: Hera's Theme #ahsoka #pianomusic #kevinkiner #herasyndulla","views":"219 views","published":"Shorts","cat":"sw"},{"id":"D4vvCLItpSI","title":"Star Wars: Ezra's Theme #ahsoka #pianomusic#ezrabridger","views":"255 views","published":"Shorts","cat":"sw"},{"id":"A2aqyEZtkNA","title":"Star Wars: Thrawn's Theme #ahsoka #piano #pianomusic#thrawn","views":"807 views","published":"Shorts","cat":"sw"},{"id":"reQfBt6Kwck","title":"Star Wars: Baylan's Theme #ahsoka #pianomusic #baylanskoll","views":"824 views","published":"Shorts","cat":"sw"},{"id":"X-zU5zEx3BU","title":"Hymns & Star Wars Music Live!","views":"","published":"","cat":"sw"}];
+
+    let currentCategory = "all";
+    let searchQuery = "";
+    let sortMode = "default";
+    let visibleItemCount = 24;
+
+    // Check URL parameters (e.g. ?filter=sw or ?filter=hymn)
+    const urlParams = new URLSearchParams(window.location.search);
+    const paramFilter = urlParams.get("filter");
+    if (paramFilter && ["sw", "hymn", "other"].includes(paramFilter)) {
+      currentCategory = paramFilter;
+      document.querySelectorAll(".seg-pill").forEach(t => {
+        const active = t.dataset.filter === currentCategory;
+        t.classList.toggle("active", active);
+        t.setAttribute("aria-selected", active ? "true" : "false");
+      });
+    }
+
+    function getFilteredVideos() {
+      let list = ALL_CHANNEL_VIDEOS.filter(v => {
+        const matchesCategory = (currentCategory === "all") || (v.cat === currentCategory);
+        const matchesSearch = !searchQuery || v.title.toLowerCase().includes(searchQuery.toLowerCase());
+        return matchesCategory && matchesSearch;
+      });
+
+      if (sortMode === "title-asc") {
+        list = [...list].sort((a, b) => a.title.localeCompare(b.title));
+      } else if (sortMode === "title-desc") {
+        list = [...list].sort((a, b) => b.title.localeCompare(a.title));
+      }
+
+      return list;
+    }
+
+    function renderCatalog() {
+      const grid = document.getElementById("videoCatalogGrid");
+      const moreBtn = document.getElementById("moreVideosBtn");
+      const counterBar = document.getElementById("catalogCounterBar");
+
+      const filtered = getFilteredVideos();
+      const itemsToShow = filtered.slice(0, visibleItemCount);
+
+      counterBar.textContent = `Showing ${Math.min(visibleItemCount, filtered.length)} of ${filtered.length} arrangements` + (searchQuery ? ` matching "${searchQuery}"` : "");
+
+      if (itemsToShow.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 4rem 1rem; color: var(--text-secondary);">
+            <p style="font-weight: 600; font-size: 1.1rem; margin-bottom: 0.35rem;">No arrangements found</p>
+            <p style="font-size: 0.92rem; color: var(--text-tertiary);">Try searching for another song, movie, or hymn title.</p>
+          </div>`;
+        moreBtn.style.display = "none";
+        return;
+      }
+
+      grid.innerHTML = itemsToShow.map(v => {
+        let badgeClass = "tag-other";
+        let badgeLabel = "Piano";
+        if (v.cat === "sw") {
+          badgeClass = "tag-starwars";
+          badgeLabel = "Star Wars";
+        } else if (v.cat === "hymn") {
+          badgeClass = "tag-hymn";
+          badgeLabel = "Hymn";
+        }
+
+        const thumbUrl = `https://i.ytimg.com/vi/${v.id}/mqdefault.jpg`;
+        const timeBadge = v.published ? `<span>&bull;</span> <span>${v.published}</span>` : "";
+
+        return `
+          <div class="apple-video-card" data-videoid="${v.id}">
+            <div class="video-thumb-box">
+              <img src="${thumbUrl}" alt="${v.title}" loading="lazy" onerror="this.src='https://placehold.co/640x360/161618/97CEE3?text=Nathan+Tracey+Piano'">
+              <div class="video-play-overlay">
+                <div class="play-circle">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+              </div>
+            </div>
+            <div class="video-card-content">
+              <span class="tag-category ${badgeClass}">${badgeLabel}</span>
+              <h3 class="video-title-heading">${v.title}</h3>
+              <div class="video-meta-row">
+                <span>${v.views || "Nathan Tracey"}</span>
+                ${timeBadge}
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+
+      moreBtn.style.display = visibleItemCount >= filtered.length ? "none" : "inline-block";
+
+      grid.querySelectorAll(".apple-video-card").forEach(card => {
+        card.addEventListener("click", () => {
+          const id = card.getAttribute("data-videoid");
+          if (id) openModal(id);
+        });
+      });
+    }
+
+    document.querySelectorAll(".seg-pill").forEach(tab => {
+      tab.addEventListener("click", () => {
+        document.querySelectorAll(".seg-pill").forEach(t => {
+          t.classList.remove("active");
+          t.setAttribute("aria-selected", "false");
+        });
+        tab.classList.add("active");
+        tab.setAttribute("aria-selected", "true");
+        currentCategory = tab.dataset.filter;
+        visibleItemCount = 24;
+        renderCatalog();
+      });
+    });
+
+    const searchInput = document.getElementById("videoSearchInput");
+    const resetBtn = document.getElementById("searchResetBtn");
+
+    if (searchInput) {
+      searchInput.addEventListener("input", (e) => {
+        searchQuery = e.target.value.trim();
+        if (resetBtn) resetBtn.classList.toggle("visible", searchQuery.length > 0);
+        visibleItemCount = 24;
+        renderCatalog();
+      });
+    }
+
+    if (resetBtn) {
+      resetBtn.addEventListener("click", () => {
+        searchInput.value = "";
+        searchQuery = "";
+        resetBtn.classList.remove("visible");
+        visibleItemCount = 24;
+        renderCatalog();
+        searchInput.focus();
+      });
+    }
+
+    const sortSelect = document.getElementById("sortSelect");
+    if (sortSelect) {
+      sortSelect.addEventListener("change", (e) => {
+        sortMode = e.target.value;
+        visibleItemCount = 24;
+        renderCatalog();
+      });
+    }
+
+    const moreBtn = document.getElementById("moreVideosBtn");
+    if (moreBtn) {
+      moreBtn.addEventListener("click", () => {
+        visibleItemCount += 24;
+        renderCatalog();
+      });
+    }
+
+    const videoModal = document.getElementById("videoModal");
+    const modalIframe = document.getElementById("modalIframe");
+    const modalCloseBtn = document.getElementById("modalCloseBtn");
+
+    function openModal(id) {
+      modalIframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+      videoModal.classList.add("open");
+      videoModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modalIframe.src = "";
+      videoModal.classList.remove("open");
+      videoModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeModal);
+    if (videoModal) {
+      videoModal.addEventListener("click", (e) => {
+        if (e.target === videoModal) closeModal();
+      });
+    }
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && videoModal && videoModal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+
+    renderCatalog();
+  </script>
+</body>
+</html>
