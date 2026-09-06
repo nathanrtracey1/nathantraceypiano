@@ -2,7 +2,7 @@
   "announcement": {
     "active": true,
     "badge": "Upcoming Release",
-    "title": "Star Wars: Accross the Stars",
+    "title": "Star Wars: Across the Stars",
     "date": "This week",
     "message": "Coming this week, the classic love theme from Attack of the Clones.",
     "linkText": "Watch Channel Trailer",
@@ -10,11 +10,9 @@
   },
   "weeklySchedule": [
     {
-      "day": "Saturdays/Sundays",
-      "category": "New Video"
+      "day": "Saturdays / Sundays",
+      "category": "New Video",
       "details": "Alternating weeks between Star Wars and Hymn videos"
-    },
-    {
-
+    }
   ]
 }
