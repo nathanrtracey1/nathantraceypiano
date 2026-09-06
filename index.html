@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nathan Tracey Piano | Star Wars Themes &amp; Sacred Hymns</title>
   <meta name="description" content="Acoustic piano covers and arrangements of Star Wars themes and sacred worship hymns by Nathan Tracey. Over 520 recordings, free downloadable audio library, and weekly releases.">
-  <link rel="icon" type="image/svg+xml" href="Youtube%20Logo.svg">
-  <link rel="apple-touch-icon" href="Youtube%20Logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/images/Youtube%20Logo.svg">
 
   <!-- Primary Typography: Sofia Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1004,7 +1004,7 @@
     <div class="apple-global-nav-inner">
       <a href="index.html" class="nav-brand-group">
         <div class="nav-brand-avatar">
-          <img src="Youtube%20Logo.svg" alt="Nathan Tracey Piano" width="24" height="24">
+          <img src="assets/images/Youtube%20Logo.svg" alt="Nathan Tracey Piano" width="24" height="24">
         </div>
         <div class="nav-brand-text">
           <span class="nav-brand-name">Nathan Tracey</span>
@@ -1037,7 +1037,7 @@
   <section class="billboard-hero" id="hero">
     <div class="hero-luminous-ring">
       <div class="hero-avatar-disc">
-        <img src="Youtube%20Logo.svg" alt="Nathan Tracey Piano Emblem" width="130" height="130">
+        <img src="assets/images/Youtube%20Logo.svg" alt="Nathan Tracey Piano Emblem" width="130" height="130">
       </div>
     </div>
 
@@ -1274,7 +1274,7 @@
       <div class="about-apple-card">
         <div class="about-visual-side">
           <div class="about-emblem-disc">
-            <img src="Youtube%20Logo.svg" alt="Nathan Tracey Piano Avatar" width="170" height="170">
+            <img src="assets/images/Youtube%20Logo.svg" alt="Nathan Tracey Piano Avatar" width="170" height="170">
           </div>
           <h3 class="about-name-title">Nathan Tracey</h3>
           <span class="about-handle-sub">@nathantraceypiano</span>
@@ -1468,7 +1468,7 @@
 
     // Dynamic schedule announcement loader
     try {
-      fetch("schedule-announcements.json")
+      fetch("data/schedule-announcements.json")
         .then(r => r.json())
         .then(data => {
           if (data && data.announcement && data.announcement.active) {

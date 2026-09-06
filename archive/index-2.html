@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nathan Tracey Piano | Star Wars Themes &amp; Sacred Hymns</title>
+  <meta name="description" content="Acoustic piano covers and arrangements of Star Wars themes and sacred worship hymns by Nathan Tracey. Over 520 recordings, free downloadable audio library, and weekly releases.">
+  <link rel="icon" type="image/svg+xml" href="Youtube%20Logo.svg">
+  <link rel="apple-touch-icon" href="Youtube%20Logo.svg">
+
+  <!-- Primary Typography: Sofia Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+
+  <!-- Star Wars Specialty Typography: Mandalore -->
+  <link href="https://db.onlinewebfonts.com/c/9ccc937e37db90da1030ca2aece5a69c?family=Mandalore" rel="stylesheet">
+
+  <style>
+    :root {
+      --font-sofia: "Sofia Sans", -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, sans-serif;
+      --font-mandalore: "Mandalore", var(--font-sofia);
+
+      /* LIGHT MODE */
+      --bg-canvas: #ffffff;
+      --bg-subtle: #f5f5f7;
+      --bg-surface: #ffffff;
+      --bg-card-blue: #f2f7fc;
+      --bg-card-green: #f2f9f4;
+
+      --text-primary: #1d1d1f;
+      --text-secondary: #6e6e73;
+      --text-tertiary: #86868b;
+
+      --border-subtle: rgba(0, 0, 0, 0.08);
+      --border-card: rgba(0, 0, 0, 0.06);
+      --divider: rgba(0, 0, 0, 0.08);
+
+      --accent-blue: #0071e3;
+      --accent-blue-hover: #0077ed;
+      --accent-blue-tint: rgba(0, 113, 227, 0.08);
+
+      --accent-green: #248a3d;
+      --accent-green-tint: rgba(36, 138, 61, 0.09);
+
+      --sw-gold: #8a6200;
+      --sw-gold-bg: rgba(217, 155, 0, 0.12);
+
+      --hero-bg-top: #7fa5cb;
+      --hero-bg-bottom: #5580aa;
+      --hero-text: #ffffff;
+      --hero-text-sub: rgba(255, 255, 255, 0.92);
+
+      --nav-bg: rgba(255, 255, 255, 0.82);
+      --nav-border: rgba(0, 0, 0, 0.08);
+      --nav-text: #1d1d1f;
+
+      --card-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
+      --card-shadow-hover: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+      --radius-sm: 10px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        /* DARK MODE */
+        --bg-canvas: #000000;
+        --bg-subtle: #121214;
+        --bg-surface: #161618;
+        --bg-card-blue: #131b26;
+        --bg-card-green: #111e16;
+
+        --text-primary: #f5f5f7;
+        --text-secondary: #a1a1a6;
+        --text-tertiary: #6e6e73;
+
+        --border-subtle: rgba(255, 255, 255, 0.12);
+        --border-card: rgba(255, 255, 255, 0.08);
+        --divider: rgba(255, 255, 255, 0.1);
+
+        --accent-blue: #2997ff;
+        --accent-blue-hover: #47a6ff;
+        --accent-blue-tint: rgba(41, 151, 255, 0.14);
+
+        --accent-green: #34c759;
+        --accent-green-tint: rgba(52, 199, 89, 0.16);
+
+        --sw-gold: #ffd60a;
+        --sw-gold-bg: rgba(255, 214, 10, 0.16);
+
+        --hero-bg-top: #1e2a38;
+        --hero-bg-bottom: #090e14;
+        --hero-text: #f5f5f7;
+        --hero-text-sub: rgba(245, 245, 247, 0.88);
+
+        --nav-bg: rgba(0, 0, 0, 0.82);
+        --nav-border: rgba(255, 255, 255, 0.12);
+        --nav-text: #f5f5f7;
+
+        --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        --card-shadow-hover: 0 14px 40px rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    ::selection { background: rgba(0, 113, 227, 0.28); color: inherit; }
+    :root { caret-color: var(--accent-blue); }
+    :focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 2px; }
+
+    body {
+      font-family: var(--font-sofia);
+      background-color: var(--bg-canvas);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* ══════ APPLE GLOBAL NAV ══════ */
+    .apple-global-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 44px;
+      z-index: 9999;
+      background: var(--nav-bg);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--nav-border);
+      transition: background-color 0.25s ease, border-color 0.25s ease;
+    }
+
+    .apple-global-nav-inner {
+      max-width: 1024px;
+      margin: 0 auto;
+      height: 100%;
+      padding: 0 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.25rem;
+    }
+
+    .nav-brand-group {
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+      text-decoration: none;
+      color: var(--nav-text);
+      flex-shrink: 0;
+    }
+
+    .nav-brand-avatar {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #97CEE3;
+      border: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .nav-brand-avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .nav-brand-text {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      font-family: var(--font-sofia);
+      color: var(--nav-text);
+    }
+
+    .nav-brand-name {
+      font-size: 0.94rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      color: var(--nav-text);
+    }
+
+    .nav-brand-piano {
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--nav-text);
+      opacity: 0.82;
+    }
+
+    .nav-links-list {
+      display: flex;
+      align-items: center;
+      gap: 1.6rem;
+      list-style: none;
+    }
+
+    .nav-links-list a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 400;
+      transition: color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .nav-links-list a:hover { color: var(--text-primary); }
+
+    .nav-pill-cta {
+      background: var(--accent-blue);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 0.35rem 0.95rem;
+      border-radius: var(--radius-pill);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .nav-pill-cta:hover {
+      background: var(--accent-blue-hover);
+      transform: scale(1.02);
+    }
+
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text-primary);
+      font-size: 1.25rem;
+      cursor: pointer;
+      padding: 0.25rem;
+    }
+
+    /* ══════ SECTION 1: APPLE EVENT BILLBOARD HERO ══════ */
+    .billboard-hero {
+      position: relative;
+      width: 100%;
+      min-height: 560px;
+      padding: 6.5rem 1.5rem 4rem;
+      margin-top: 44px;
+      background: radial-gradient(circle at 50% 36%, var(--hero-bg-top) 0%, var(--hero-bg-bottom) 100%);
+      color: var(--hero-text);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-luminous-ring {
+      position: relative;
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-luminous-ring::before {
+      content: "";
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.85) 0%, rgba(160, 210, 255, 0.45) 45%, rgba(255, 180, 200, 0.25) 70%, transparent 85%);
+      filter: blur(16px);
+      animation: pulseAura 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulseAura {
+      0% { transform: scale(0.96); opacity: 0.85; }
+      100% { transform: scale(1.05); opacity: 1; }
+    }
+
+    .hero-avatar-disc {
+      position: relative;
+      z-index: 2;
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #97CEE3;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.25);
+      border: 2px solid rgba(255, 255, 255, 0.6);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-avatar-disc:hover { transform: scale(1.04); }
+    .hero-avatar-disc img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .hero-billboard-title {
+      font-family: var(--font-sofia);
+      font-size: clamp(2.4rem, 5.5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.65rem;
+      color: var(--hero-text);
+      max-width: 820px;
+    }
+
+    .hero-billboard-subhead {
+      font-size: clamp(1.1rem, 2.2vw, 1.45rem);
+      font-weight: 400;
+      color: var(--hero-text-sub);
+      max-width: 640px;
+      margin: 0 auto 1.75rem;
+      line-height: 1.4;
+    }
+
+    .apple-pill-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-pill-white {
+      background: #ffffff;
+      color: #1d1d1f;
+      font-size: 0.94rem;
+      font-weight: 600;
+      padding: 0.7rem 1.45rem;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .btn-pill-white:hover { background: #f0f0f2; transform: scale(1.02); }
+
+    .btn-pill-outline-white {
+      background: transparent;
+      color: #ffffff;
+      font-size: 0.94rem;
+      font-weight: 600;
+      padding: 0.65rem 1.4rem;
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      text-decoration: none;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .btn-pill-outline-white:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: #ffffff;
+      transform: scale(1.02);
+    }
+
+    /* ══════ SECTIONS 2 & 3: SYMMETRIC STAR WARS & HYMNS SHOWCASES ══════ */
+    .apple-showcase-section {
+      padding: 5rem 1.5rem 4.5rem;
+      text-align: center;
+      border-bottom: 12px solid var(--bg-subtle);
+    }
+
+    .showcase-starwars { background: var(--bg-canvas); }
+    .showcase-hymns { background: var(--bg-subtle); }
+
+    .apple-product-title {
+      font-size: clamp(2.4rem, 5.2vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+    }
+
+    .apple-product-subhead {
+      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+      color: var(--text-secondary);
+      max-width: 640px;
+      margin: 0 auto 1.6rem;
+    }
+
+    .apple-btn-blue {
+      background: var(--accent-blue);
+      color: #ffffff;
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.65rem 1.35rem;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      border: none;
+    }
+
+    .apple-btn-blue:hover {
+      background: var(--accent-blue-hover);
+      transform: scale(1.02);
+    }
+
+    .apple-btn-outline {
+      background: transparent;
+      color: var(--accent-blue);
+      border: 1px solid var(--accent-blue);
+      font-size: 0.92rem;
+      font-weight: 600;
+      padding: 0.65rem 1.35rem;
+      border-radius: var(--radius-pill);
+      text-decoration: none;
+      transition: all 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+    }
+
+    .apple-btn-outline:hover {
+      background: var(--accent-blue-tint);
+      transform: scale(1.02);
+    }
+
+    .apple-cinema-frame {
+      max-width: 880px;
+      margin: 2.75rem auto 2rem;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--card-shadow-hover);
+      border: 1px solid var(--border-subtle);
+      background: #000000;
+    }
+
+    .apple-cinema-viewport {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+
+    .apple-cinema-viewport iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .featured-strip {
+      max-width: 880px;
+      margin: 2rem auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      text-align: left;
+    }
+
+    .featured-item-mini {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-md);
+      padding: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .featured-item-mini:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--card-shadow);
+      border-color: var(--border-subtle);
+    }
+
+    .featured-mini-thumb {
+      width: 58px;
+      height: 38px;
+      border-radius: 6px;
+      overflow: hidden;
+      background: #000;
+      flex-shrink: 0;
+    }
+
+    .featured-mini-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    .featured-mini-info { overflow: hidden; }
+
+    .featured-mini-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 2px;
+    }
+
+    .featured-mini-meta {
+      font-size: 0.74rem;
+      color: var(--text-tertiary);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ══════ SECTION 4: TWO-COLUMN APPLE BENTO (Audio & Schedule) ══════ */
+    .apple-bento-section {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 4rem 1.25rem 4.5rem;
+    }
+
+    .apple-bento-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .apple-bento-tile {
+      background: var(--bg-subtle);
+      border-radius: var(--radius-lg);
+      padding: 3rem 2.25rem;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border-card);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .apple-bento-tile:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--card-shadow);
+    }
+
+    .apple-bento-tile-blue {
+      background: var(--bg-card-blue);
+    }
+
+    .bento-tile-title {
+      font-size: clamp(1.8rem, 3.2vw, 2.3rem);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+      margin-bottom: 0.45rem;
+    }
+
+    .bento-tile-sub {
+      color: var(--text-secondary);
+      font-size: 1.02rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    .bento-schedule-list {
+      list-style: none;
+      width: 100%;
+      margin: 1.25rem 0 1.5rem;
+      border-top: 1px solid var(--divider);
+      padding-top: 1rem;
+    }
+
+    .bento-schedule-list li {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.92rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--divider);
+    }
+
+    .bento-schedule-list li:last-child { border-bottom: none; }
+
+    /* ══════ APPLE ANNOUNCEMENT CARD (EASILY EDITABLE) ══════ */
+    .apple-announcement-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.35rem 1.4rem;
+      margin-top: 1.5rem;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .announcement-header {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .announcement-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.65rem;
+      background: var(--accent-green-tint);
+      color: var(--accent-green);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border-radius: var(--radius-pill);
+    }
+
+    .announcement-date {
+      font-size: 0.8rem;
+      color: var(--text-tertiary);
+      font-weight: 500;
+    }
+
+    .announcement-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 0.4rem;
+      letter-spacing: -0.015em;
+    }
+
+    .announcement-body {
+      font-size: 0.92rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ══════ SECTION 5: EXPANDED ABOUT ME SECTION ══════ */
+    .about-apple-section {
+      background: var(--bg-canvas);
+      padding: 5.5rem 1.5rem 5rem;
+      border-top: 12px solid var(--bg-subtle);
+      border-bottom: 12px solid var(--bg-subtle);
+    }
+
+    .about-apple-container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .about-section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .about-section-title {
+      font-size: clamp(2.2rem, 4.5vw, 3.4rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--text-primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-section-subhead {
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+    }
+
+    .about-apple-card {
+      background: var(--bg-subtle);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-card);
+      padding: 3.5rem 3rem;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      align-items: center;
+      box-shadow: var(--card-shadow);
+    }
+
+    .about-visual-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .about-emblem-disc {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #97CEE3;
+      border: 3px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+      margin-bottom: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .about-emblem-disc img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-name-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--text-primary);
+      margin-bottom: 0.2rem;
+    }
+
+    .about-handle-sub {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .about-content-side {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .about-paragraph {
+      font-size: 1.05rem;
+      color: var(--text-primary);
+      line-height: 1.65;
+    }
+
+    .about-badges-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 0.5rem;
+    }
+
+    .about-feature-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.4rem 0.95rem;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .about-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* ══════ SECTION 6: CATALOG CALLOUT BANNER ══════ */
+    .catalog-callout-banner {
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border-card);
+      padding: 4.5rem 1.25rem;
+      text-align: center;
+    }
+
+    .callout-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .callout-title {
+      font-size: clamp(2rem, 3.8vw, 2.8rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.5rem;
+    }
+
+    .callout-sub {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+    }
+
+    /* ══════ SECTION 7: SONG REQUEST FORM WITH AIRY DROPDOWNS ══════ */
+    .request-section {
+      padding: 4.5rem 1.25rem;
+    }
+
+    .request-container {
+      max-width: 540px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .request-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 0.4rem;
+    }
+
+    .request-sub {
+      color: var(--text-secondary);
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .apple-form-group {
+      text-align: left;
+      margin-bottom: 1.35rem;
+    }
+
+    .apple-form-group label {
+      display: block;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 0.45rem;
+    }
+
+    .apple-input {
+      width: 100%;
+      height: 48px;
+      padding: 0 1.15rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-subtle);
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.2s ease;
+    }
+
+    /* ROOMY, NON-CRAMPED APPLE SELECT DROPDOWN */
+    select.apple-input {
+      height: 48px;
+      padding: 0 2.75rem 0 1.15rem;
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%2386868b' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      background-size: 14px;
+    }
+
+    .apple-input:hover {
+      border-color: var(--accent-blue);
+      background-color: var(--bg-surface);
+    }
+
+    .apple-input:focus {
+      border-color: var(--accent-blue);
+      background-color: var(--bg-surface);
+      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+    }
+
+    textarea.apple-input {
+      height: auto;
+      min-height: 110px;
+      padding: 0.85rem 1.15rem;
+      resize: vertical;
+    }
+
+    .request-success-box {
+      display: none;
+      padding: 2rem;
+    }
+
+    .request-success-box.show { display: block; }
+
+    /* ══════ APPLE MODAL LIGHTBOX ══════ */
+    .apple-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: rgba(0, 0, 0, 0.72);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .apple-modal-overlay.open { display: flex; }
+
+    .apple-modal-window {
+      position: relative;
+      width: 100%;
+      max-width: 880px;
+      background: #000000;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: -42px;
+      right: 0;
+      background: none;
+      border: none;
+      color: #ffffff;
+      font-size: 2rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.25rem;
+    }
+
+    /* ══════ 5-COLUMN DIRECTORY FOOTER ══════ */
+    .apple-directory-footer {
+      background: var(--bg-subtle);
+      padding: 3.5rem 1.25rem 2.5rem;
+      color: var(--text-tertiary);
+      font-size: 0.82rem;
+      border-top: 1px solid var(--border-card);
+    }
+
+    .directory-grid {
+      max-width: 1024px;
+      margin: 0 auto 2.5rem;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 1.5rem;
+      text-align: left;
+    }
+
+    .directory-col-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-primary);
+      margin-bottom: 0.85rem;
+    }
+
+    .directory-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .directory-list a {
+      color: var(--text-secondary);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .directory-list a:hover { color: var(--text-primary); }
+
+    .footer-legal-strip {
+      max-width: 1024px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--divider);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    @media (max-width: 860px) {
+      .apple-bento-grid { grid-template-columns: 1fr; }
+      .about-apple-card { grid-template-columns: 1fr; text-align: center; padding: 2.5rem 1.5rem; }
+      .about-visual-side { margin-bottom: 0.5rem; }
+      .about-badges-grid { justify-content: center; }
+      .about-cta-row { justify-content: center; }
+      .directory-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links-list {
+        display: none;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-subtle);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      .nav-links-list.open { display: flex; }
+      .mobile-menu-toggle { display: block; }
+      .billboard-hero { padding: 5rem 1.25rem 3rem; }
+      .hero-luminous-ring { width: 140px; height: 140px; }
+      .hero-avatar-disc { width: 100px; height: 100px; }
+      .directory-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- APPLE GLOBAL HEADER -->
+  <header class="apple-global-nav">
+    <div class="apple-global-nav-inner">
+      <a href="index.html" class="nav-brand-group">
+        <div class="nav-brand-avatar">
+          <img src="Youtube%20Logo.svg" alt="Nathan Tracey Piano" width="24" height="24">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">Nathan Tracey</span>
+          <span class="nav-brand-piano">Piano</span>
+        </div>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links-list" id="navLinksList">
+          <li><a href="#starwars">Star Wars</a></li>
+          <li><a href="#hymns">Sacred Hymns</a></li>
+          <li><a href="videos.html">All Videos (528)</a></li>
+          <li><a href="#audio">Free Audio</a></li>
+          <li><a href="#schedule">Schedule</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#request">Request</a></li>
+        </ul>
+      </nav>
+
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <a href="https://www.youtube.com/@nathantraceypiano?sub_confirmation=1" target="_blank" class="nav-pill-cta">
+          Subscribe
+        </a>
+        <button class="mobile-menu-toggle" id="menuToggle" aria-label="Toggle Navigation">&#9776;</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- SECTION 1: APPLE EVENT BILLBOARD HERO -->
+  <section class="billboard-hero" id="hero">
+    <div class="hero-luminous-ring">
+      <div class="hero-avatar-disc">
+        <img src="Youtube%20Logo.svg" alt="Nathan Tracey Piano Emblem" width="130" height="130">
+      </div>
+    </div>
+
+    <h1 class="hero-billboard-title">Surprise and shine.</h1>
+    <p class="hero-billboard-subhead">
+      Cinematic Star Wars piano arrangements and sacred worship hymns. Over 520 recordings to listen, study, and pray.
+    </p>
+
+    <div class="apple-pill-row">
+      <a href="https://www.youtube.com/@nathantraceypiano" target="_blank" class="btn-pill-white">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+        Watch on YouTube
+      </a>
+      <a href="videos.html" class="btn-pill-outline-white">
+        Browse 528 Videos
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: STAR WARS SHOWCASE -->
+  <section class="apple-showcase-section showcase-starwars" id="starwars">
+    <h2 class="apple-product-title">Star Wars Collection</h2>
+    <p class="apple-product-subhead">
+      182 piano themes across the entire Skywalker saga, The Mandalorian, and animated series.
+    </p>
+
+    <div class="apple-pill-row">
+      <a href="videos.html?filter=sw" class="apple-btn-blue">
+        Explore Star Wars (182)
+      </a>
+      <a href="#request" class="apple-btn-outline">
+        Request a Theme
+      </a>
+    </div>
+
+    <div class="apple-cinema-frame">
+      <div class="apple-cinema-viewport">
+        <iframe
+          src="https://www.youtube.com/embed/ct0W0IYFV_0?rel=0"
+          title="Nathan Tracey Piano - Star Wars Showcase"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Curated Featured Star Wars Mini-Ribbon -->
+    <div class="featured-strip">
+      <div class="featured-item-mini" onclick="openModal('dG27LffyN1I')">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/dG27LffyN1I/mqdefault.jpg" alt="Han Solo and the Princess" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Han Solo &amp; The Princess</div>
+          <div class="featured-mini-meta">Love Theme &bull; 1 mo ago</div>
+        </div>
+      </div>
+      <div class="featured-item-mini" onclick="openModal('TuhY29Tz_9E')">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/TuhY29Tz_9E/mqdefault.jpg" alt="Moff Gideon Theme" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Moff Gideon's Theme</div>
+          <div class="featured-mini-meta">The Mandalorian &bull; 1 mo ago</div>
+        </div>
+      </div>
+      <div class="featured-item-mini" onclick="openModal('f1g0iF52L7c')">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/f1g0iF52L7c/mqdefault.jpg" alt="Darth Maul Theme" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Darth Maul Shadow Lord</div>
+          <div class="featured-mini-meta">Dark Theme &bull; 2 mos ago</div>
+        </div>
+      </div>
+      <div class="featured-item-mini" onclick="openModal('9q_rP_m2e_Y')">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/9q_rP_m2e_Y/mqdefault.jpg" alt="Mandalorian Medley" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Complete Mando Medley</div>
+          <div class="featured-mini-meta">10 Themes &bull; 3 mos ago</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: SACRED HYMNS SHOWCASE (Directly following Star Wars) -->
+  <section class="apple-showcase-section showcase-hymns" id="hymns">
+    <h2 class="apple-product-title">Sacred Hymns</h2>
+    <p class="apple-product-subhead">
+      299 acoustic arrangements of timeless worship hymns and prayer songs to glorify God.
+    </p>
+
+    <div class="apple-pill-row">
+      <a href="videos.html?filter=hymn" class="apple-btn-blue">
+        Explore Hymns (299)
+      </a>
+      <a href="#audio" class="apple-btn-outline">
+        Free Audio Library
+      </a>
+    </div>
+
+    <div class="apple-cinema-frame">
+      <div class="apple-cinema-viewport">
+        <iframe
+          src="https://www.youtube.com/embed/pYkXvT0r5_Y?rel=0"
+          title="Be Thou My Vision - Nathan Tracey Piano"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Curated Featured Hymns Mini-Ribbon -->
+    <div class="featured-strip">
+      <div class="featured-item-mini" onclick="openModal('pYkXvT0r5_Y')">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/pYkXvT0r5_Y/mqdefault.jpg" alt="Be Thou My Vision" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Be Thou My Vision</div>
+          <div class="featured-mini-meta">Classic Hymn &bull; 10 days ago</div>
+        </div>
+      </div>
+      <div class="featured-item-mini" onclick="openModal('lJ-x4pWn6h4')">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/lJ-x4pWn6h4/mqdefault.jpg" alt="It Is Well with My Soul" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">It Is Well with My Soul</div>
+          <div class="featured-mini-meta">Worship Piano &bull; 1 mo ago</div>
+        </div>
+      </div>
+      <div class="featured-item-mini" onclick="openModal('k5xQeL8aN7g')">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/k5xQeL8aN7g/mqdefault.jpg" alt="Come Thou Fount" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Come Thou Fount</div>
+          <div class="featured-mini-meta">Sacred Praise &bull; 2 mos ago</div>
+        </div>
+      </div>
+      <div class="featured-item-mini" onclick="openModal('m3x8P1z4q8Y')">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/m3x8P1z4q8Y/mqdefault.jpg" alt="Alas! And Did My Savior Bleed" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Alas! And Did My Savior Bleed</div>
+          <div class="featured-mini-meta">Devotional &bull; 3 mos ago</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: TWO-COLUMN APPLE BENTO (Audio Library & Release Schedule with Announcements) -->
+  <section class="apple-bento-section" id="audio">
+    <div class="apple-bento-grid">
+      <!-- Left Card: Free Audio Library -->
+      <div class="apple-bento-tile apple-bento-tile-blue">
+        <h3 class="bento-tile-title">Audio Library</h3>
+        <p class="bento-tile-sub">
+          Download master quality MP3 recordings of all piano hymn arrangements directly from Google Drive.
+        </p>
+        <div class="apple-pill-row" style="justify-content: flex-start; margin-bottom: 1.5rem;">
+          <a href="https://drive.google.com/drive/folders/12g400yqbRkD7qevVjM3f322bc0AaHsyk?usp=sharing" target="_blank" class="apple-btn-blue">
+            Open Drive Folder
+          </a>
+          <a href="#request" class="apple-btn-outline">
+            Request Audio
+          </a>
+        </div>
+        <ul class="bento-schedule-list">
+          <li>
+            <span style="font-weight: 600;">Audio Format</span>
+            <span style="color: var(--text-secondary);">High-Bitrate Master MP3</span>
+          </li>
+          <li>
+            <span style="font-weight: 600;">Access</span>
+            <span style="color: var(--text-secondary);">100% Free for Worship &amp; Prayer</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right Card: Weekly Release Schedule & Announcement Bulletin -->
+      <div class="apple-bento-tile" id="schedule">
+        <div style="display: flex; justify-content: space-between; align-items: baseline; width: 100%; margin-bottom: 0.45rem;">
+          <h3 class="bento-tile-title" style="margin-bottom: 0;">Release Schedule</h3>
+          <a href="https://www.youtube.com/@nathantraceypiano?sub_confirmation=1" target="_blank" class="apple-btn-blue" style="font-size: 0.8rem; padding: 0.4rem 0.95rem;">
+            Subscribe
+          </a>
+        </div>
+        <p class="bento-tile-sub" style="margin-bottom: 0.5rem;">
+          New piano arrangements published every week alternating between cinematic galaxy scores and worship.
+        </p>
+
+        <ul class="bento-schedule-list" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
+          <li>
+            <span style="font-weight: 600;">Wednesdays</span>
+            <span style="color: var(--text-secondary);">Star Wars Theme or Medley</span>
+          </li>
+          <li>
+            <span style="font-weight: 600;">Sundays</span>
+            <span style="color: var(--text-secondary);">Sacred Hymn or Worship Cover</span>
+          </li>
+        </ul>
+
+        <!-- 📢 EASILY EDITABLE ANNOUNCEMENTS CARD -->
+        <div class="apple-announcement-card" id="announcementBlock">
+          <div class="announcement-header">
+            <span class="announcement-badge" id="announcementBadge">
+              <span style="font-size: 0.65rem;">&#9679;</span>
+              Upcoming Release
+            </span>
+            <span class="announcement-date" id="announcementDate">Wednesday, September 10, 2026</span>
+          </div>
+          <h4 class="announcement-title" id="announcementTitle">Star Wars: The Bad Batch Finale Medley</h4>
+          <p class="announcement-body" id="announcementMsg">
+            Currently arranging the emotional season finale motifs on piano! The free master MP3 and sheet music will be added to the Google Drive library on release day.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: EXPANDED ABOUT NATHAN TRACEY SECTION -->
+  <section class="about-apple-section" id="about">
+    <div class="about-apple-container">
+      <div class="about-section-header">
+        <h2 class="about-section-title">About Me</h2>
+        <p class="about-section-subhead">Music to glorify God and inspire fans across galaxies.</p>
+      </div>
+
+      <div class="about-apple-card">
+        <div class="about-visual-side">
+          <div class="about-emblem-disc">
+            <img src="Youtube%20Logo.svg" alt="Nathan Tracey Piano Avatar" width="170" height="170">
+          </div>
+          <h3 class="about-name-title">Nathan Tracey</h3>
+          <span class="about-handle-sub">@nathantraceypiano</span>
+        </div>
+
+        <div class="about-content-side">
+          <p class="about-paragraph">
+            I make piano videos of Star Wars themes and hymns to glorify God. My channel features piano covers, arrangements, medleys, and tutorials spanning the entire Star Wars universe alongside classic and contemporary hymns.
+          </p>
+          <p class="about-paragraph">
+            Whether you're looking for relaxing background worship music for your devotions, epic Star Wars medleys, or piano tutorials to learn your favorite themes, you'll find it here. All audio files are available for free download.
+          </p>
+
+          <div class="about-badges-grid">
+            <div class="about-feature-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>Star Wars &mdash; Wednesdays</span>
+            </div>
+            <div class="about-feature-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M7 7h10"/></svg>
+              <span>Hymns &mdash; Sundays</span>
+            </div>
+            <div class="about-feature-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              <span>Free Google Drive MP3s</span>
+            </div>
+            <div class="about-feature-badge">
+              <span>Soli Deo Gloria</span>
+            </div>
+          </div>
+
+          <div class="about-cta-row">
+            <a href="https://www.youtube.com/@nathantraceypiano?sub_confirmation=1" target="_blank" class="apple-btn-blue">
+              Subscribe on YouTube
+            </a>
+            <a href="#request" class="apple-btn-outline">
+              Request a Song
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: CATALOG CALLOUT BANNER -->
+  <section class="catalog-callout-banner">
+    <div class="callout-inner">
+      <h2 class="callout-title">The Complete Video Archive</h2>
+      <p class="callout-sub">
+        Explore and search all 528 arrangements—including full covers, animated series medleys, and sacred hymn recordings.
+      </p>
+      <div class="apple-pill-row">
+        <a href="videos.html" class="apple-btn-blue" style="padding: 0.8rem 1.8rem; font-size: 1rem;">
+          Open Video Catalog (528) &rarr;
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: SONG REQUEST MODULE -->
+  <section class="request-section" id="request">
+    <div class="request-container">
+      <h2 class="request-title">Request a Song</h2>
+      <p class="request-sub">Have a hymn or Star Wars motif you'd like to hear arranged on piano?</p>
+
+      <form id="songRequestForm">
+        <div class="apple-form-group">
+          <label for="reqName">Your Name</label>
+          <input type="text" id="reqName" name="entry.1536914983" class="apple-input" required placeholder="Your name">
+        </div>
+
+        <div class="apple-form-group">
+          <label for="reqCategory">Category</label>
+          <select id="reqCategory" name="entry.854791854" class="apple-input" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Star Wars Theme">Star Wars Theme</option>
+            <option value="Hymn/Worship Song">Hymn / Worship Song</option>
+            <option value="Other">Other Soundtrack / Classical</option>
+          </select>
+        </div>
+
+        <div class="apple-form-group">
+          <label for="reqSong">Theme or Song Name</label>
+          <input type="text" id="reqSong" name="entry.370931675" class="apple-input" required placeholder="e.g. Han Solo and the Princess, Come Thou Fount">
+        </div>
+
+        <div class="apple-form-group">
+          <label for="reqDetails">Arrangement Notes (Optional)</label>
+          <textarea id="reqDetails" name="entry.1533661806" class="apple-input" placeholder="Easy or advanced, specific key, or tempo preference..."></textarea>
+        </div>
+
+        <button type="submit" class="apple-btn-blue" style="width: 100%; justify-content: center; padding: 0.85rem; margin-top: 0.5rem;">
+          Submit Song Request
+        </button>
+      </form>
+
+      <div class="request-success-box" id="requestSuccess">
+        <div style="width: 44px; height: 44px; border-radius: 50%; background: rgba(52, 199, 89, 0.15); color: #34c759; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.35rem;">Request Received</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem;">Thank you! Your suggestion has been sent directly to Nathan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5-COLUMN DIRECTORY FOOTER -->
+  <footer class="apple-directory-footer">
+    <div class="directory-grid">
+      <div>
+        <h4 class="directory-col-title">Collections</h4>
+        <ul class="directory-list">
+          <li><a href="#starwars">Star Wars Themes</a></li>
+          <li><a href="#hymns">Sacred Hymns</a></li>
+          <li><a href="videos.html">Full Video Archive</a></li>
+          <li><a href="videos.html?filter=sw">Star Wars Catalog</a></li>
+          <li><a href="videos.html?filter=hymn">Hymns Catalog</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="directory-col-title">Resources</h4>
+        <ul class="directory-list">
+          <li><a href="https://drive.google.com/drive/folders/12g400yqbRkD7qevVjM3f322bc0AaHsyk?usp=sharing" target="_blank">Google Drive MP3s</a></li>
+          <li><a href="#audio">Free Audio Library</a></li>
+          <li><a href="#request">Song Requests</a></li>
+          <li><a href="videos.html">Arrangement Index</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="directory-col-title">Schedule</h4>
+        <ul class="directory-list">
+          <li><a href="#schedule">Star Wars Wednesdays</a></li>
+          <li><a href="#schedule">Hymn Sundays</a></li>
+          <li><a href="https://www.youtube.com/@nathantraceypiano/community" target="_blank">Community Posts</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="directory-col-title">Channel</h4>
+        <ul class="directory-list">
+          <li><a href="https://www.youtube.com/@nathantraceypiano" target="_blank">YouTube Channel</a></li>
+          <li><a href="https://www.youtube.com/@nathantraceypiano/videos" target="_blank">Longform Videos</a></li>
+          <li><a href="https://www.youtube.com/@nathantraceypiano/shorts" target="_blank">Shorts</a></li>
+          <li><a href="https://www.youtube.com/@nathantraceypiano/playlists" target="_blank">Playlists</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="directory-col-title">About</h4>
+        <ul class="directory-list">
+          <li><a href="#about">Nathan Tracey</a></li>
+          <li><a href="#request">Contact / Request</a></li>
+          <li><span style="color: var(--text-tertiary);">Soli Deo Gloria</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-legal-strip">
+      <div>
+        Copyright &copy; 2026 Nathan Tracey Piano. All rights reserved.
+      </div>
+      <div style="display: flex; gap: 1.25rem;">
+        <a href="videos.html" style="color: var(--text-secondary); text-decoration: none;">All Videos</a>
+        <a href="#audio" style="color: var(--text-secondary); text-decoration: none;">Audio</a>
+        <a href="#request" style="color: var(--text-secondary); text-decoration: none;">Requests</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div class="apple-modal-overlay" id="videoModal" aria-hidden="true">
+    <div class="apple-modal-window">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close player">&times;</button>
+      <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000;">
+        <iframe id="modalIframe" style="position: absolute; inset: 0; width: 100%; height: 100%; border: none;" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinksList = document.getElementById("navLinksList");
+    if (menuToggle && navLinksList) {
+      menuToggle.addEventListener("click", () => navLinksList.classList.toggle("open"));
+      navLinksList.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => navLinksList.classList.remove("open"));
+      });
+    }
+
+    // Dynamic schedule announcement loader
+    try {
+      fetch("schedule-announcements.json")
+        .then(r => r.json())
+        .then(data => {
+          if (data && data.announcement && data.announcement.active) {
+            const a = data.announcement;
+            if (a.badge) document.getElementById("announcementBadge").innerHTML = `<span style="font-size: 0.65rem;">&#9679;</span> ${a.badge}`;
+            if (a.date) document.getElementById("announcementDate").textContent = a.date;
+            if (a.title) document.getElementById("announcementTitle").textContent = a.title;
+            if (a.message) document.getElementById("announcementMsg").textContent = a.message;
+          }
+        }).catch(() => {});
+    } catch (e) {}
+
+    const videoModal = document.getElementById("videoModal");
+    const modalIframe = document.getElementById("modalIframe");
+    const modalCloseBtn = document.getElementById("modalCloseBtn");
+
+    function openModal(id) {
+      modalIframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+      videoModal.classList.add("open");
+      videoModal.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeModal() {
+      modalIframe.src = "";
+      videoModal.classList.remove("open");
+      videoModal.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    if (modalCloseBtn) modalCloseBtn.addEventListener("click", closeModal);
+    if (videoModal) {
+      videoModal.addEventListener("click", (e) => {
+        if (e.target === videoModal) closeModal();
+      });
+    }
+    window.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && videoModal && videoModal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+
+    const requestForm = document.getElementById("songRequestForm");
+    const requestSuccess = document.getElementById("requestSuccess");
+
+    if (requestForm && requestSuccess) {
+      requestForm.addEventListener("submit", function(e) {
+        e.preventDefault();
+        const formData = new FormData(requestForm);
+        const GFORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScNa815yswDBCo7CxqhipWwaMTkmc2De55raAIhYu43I-fJqw/formResponse";
+
+        fetch(GFORM_URL, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors"
+        }).then(() => {
+          requestForm.style.display = "none";
+          requestSuccess.classList.add("show");
+        }).catch(() => {
+          requestForm.style.display = "none";
+          requestSuccess.classList.add("show");
+        });
+      });
+    }
+  </script>
+</body>
+</html>
