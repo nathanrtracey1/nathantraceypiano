@@ -2,24 +2,19 @@
   "announcement": {
     "active": true,
     "badge": "Upcoming Release",
-    "title": "Star Wars: The Bad Batch Finale Medley",
-    "date": "Wednesday, September 10, 2026",
-    "message": "Currently arranging the emotional season finale motifs on piano! The free master MP3 and sheet music will be added to the Google Drive library on release day.",
+    "title": "Star Wars: Accross the Stars",
+    "date": "This week",
+    "message": "Coming this week, the classic love theme from Attack of the Clones.",
     "linkText": "Watch Channel Trailer",
     "linkUrl": "#hero"
   },
   "weeklySchedule": [
     {
-      "day": "Wednesdays",
-      "category": "Star Wars Theme or Medley",
-      "time": "10:00 AM EST",
-      "details": "Epic motifs, character themes, and film scores."
+      "day": "Saturdays/Sundays",
+      "category": "New Video"
+      "details": "Alternating weeks between Star Wars and Hymn videos"
     },
     {
-      "day": "Sundays",
-      "category": "Sacred Hymn or Worship Cover",
-      "time": "9:00 AM EST",
-      "details": "Acoustic hymn arrangements for prayer, worship, and devotion."
-    }
+
   ]
 }
