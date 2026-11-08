@@ -4,7 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nathan Tracey Piano | Star Wars Themes &amp; Sacred Hymns</title>
-  <meta name="description" content="Acoustic piano covers and arrangements of Star Wars themes and sacred worship hymns by Nathan Tracey. Over 520 recordings, free downloadable audio library, and weekly releases.">
+  <meta name="description" content="Acoustic piano covers and arrangements of Star Wars themes and sacred worship hymns by Nathan Tracey. Over 500 recordings, a free downloadable audio library, and regular new releases.">
+
+  <!-- Social share previews (Facebook, iMessage, Discord, X, etc.) -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Nathan Tracey Piano">
+  <meta property="og:title" content="Nathan Tracey Piano | Star Wars Themes &amp; Sacred Hymns">
+  <meta property="og:description" content="Cinematic Star Wars piano arrangements and sacred worship hymns. Over 500 recordings to listen, study, and pray.">
+  <meta property="og:url" content="https://nathanrtracey1.github.io/nathantraceypiano/">
+  <meta property="og:image" content="https://nathanrtracey1.github.io/nathantraceypiano/assets/images/share.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Nathan Tracey Piano | Star Wars Themes &amp; Sacred Hymns">
+  <meta name="twitter:description" content="Cinematic Star Wars piano arrangements and sacred worship hymns. Over 500 recordings to listen, study, and pray.">
+  <meta name="twitter:image" content="https://nathanrtracey1.github.io/nathantraceypiano/assets/images/share.png">
+
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
   <link rel="apple-touch-icon" href="assets/images/Youtube%20Logo.svg">
 
@@ -470,6 +483,10 @@
     }
 
     .featured-item-mini {
+      width: 100%;
+      font: inherit;
+      color: inherit;
+      text-align: left;
       background: var(--bg-surface);
       border: 1px solid var(--border-card);
       border-radius: var(--radius-md);
@@ -632,6 +649,15 @@
       color: var(--text-secondary);
       line-height: 1.5;
     }
+
+    .announcement-link {
+      display: none;
+      margin-top: 0.85rem;
+      font-size: 0.8rem;
+      padding: 0.45rem 1rem;
+    }
+
+    .announcement-link.show { display: inline-flex; }
 
     /* ══════ SECTION 5: EXPANDED ABOUT ME SECTION ══════ */
     .about-apple-section {
@@ -1016,7 +1042,7 @@
         <ul class="nav-links-list" id="navLinksList">
           <li><a href="#starwars">Star Wars</a></li>
           <li><a href="#hymns">Sacred Hymns</a></li>
-          <li><a href="videos.html">All Videos (528)</a></li>
+          <li><a href="videos.html">All Videos (<span data-count="all">533</span>)</a></li>
           <li><a href="#audio">Free Audio</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#about">About</a></li>
@@ -1043,7 +1069,7 @@
 
     <h1 class="hero-billboard-title">Surprise and shine.</h1>
     <p class="hero-billboard-subhead">
-      Cinematic Star Wars piano arrangements and sacred worship hymns. Over 520 recordings to listen, study, and pray.
+      Cinematic Star Wars piano arrangements and sacred worship hymns. Over 500 recordings to listen, study, and pray.
     </p>
 
     <div class="apple-pill-row">
@@ -1052,7 +1078,7 @@
         Watch on YouTube
       </a>
       <a href="videos.html" class="btn-pill-outline-white">
-        Browse 528 Videos
+        Browse <span data-count="all">533</span> Videos
       </a>
     </div>
   </section>
@@ -1061,12 +1087,12 @@
   <section class="apple-showcase-section showcase-starwars" id="starwars">
     <h2 class="apple-product-title">Star Wars Collection</h2>
     <p class="apple-product-subhead">
-      182 piano themes across the entire Skywalker saga, The Mandalorian, and animated series.
+      <span data-count="sw">184</span> piano themes across the entire Skywalker saga, The Mandalorian, and animated series.
     </p>
 
     <div class="apple-pill-row">
       <a href="videos.html?filter=sw" class="apple-btn-blue">
-        Explore Star Wars (182)
+        Explore Star Wars (<span data-count="sw">184</span>)
       </a>
       <a href="#request" class="apple-btn-outline">
         Request a Theme
@@ -1084,44 +1110,44 @@
       </div>
     </div>
 
-    <!-- Curated Featured Star Wars Mini-Ribbon -->
-    <div class="featured-strip">
-      <div class="featured-item-mini" onclick="openModal('CdltU0FwULk')">
+    <!-- Latest Star Wars uploads (auto-filled from data/all_videos.json; the markup below is the fallback) -->
+    <div class="featured-strip" id="featuredSw">
+      <button type="button" class="featured-item-mini" data-video-id="g6YFcoCUnzI">
         <div class="featured-mini-thumb">
-          <img src="https://i.ytimg.com/vi/CdltU0FwULk/mqdefault.jpg" alt="Han Solo and the Princess" loading="lazy">
+          <img src="https://i.ytimg.com/vi/g6YFcoCUnzI/mqdefault.jpg" alt="" loading="lazy">
         </div>
         <div class="featured-mini-info">
-          <div class="featured-mini-title">Han Solo &amp; The Princess</div>
-          <div class="featured-mini-meta">Love Theme &bull; 1 mo ago</div>
+          <div class="featured-mini-title">Shakari</div>
+          <div class="featured-mini-meta">Star Wars &bull; Oct 10</div>
         </div>
-      </div>
-      <div class="featured-item-mini" onclick="openModal('CrQ3F20765Q')">
+      </button>
+      <button type="button" class="featured-item-mini" data-video-id="elMRcdUThK4">
         <div class="featured-mini-thumb">
-          <img src="https://i.ytimg.com/vi/CrQ3F20765Q/mqdefault.jpg" alt="Moff Gideon Theme" loading="lazy">
+          <img src="https://i.ytimg.com/vi/elMRcdUThK4/mqdefault.jpg" alt="" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Star Wars: Across the Stars</div>
+          <div class="featured-mini-meta">Star Wars &bull; Sep 11</div>
+        </div>
+      </button>
+      <button type="button" class="featured-item-mini" data-video-id="CdltU0FwULk">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/CdltU0FwULk/mqdefault.jpg" alt="" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Han Solo and the Princess</div>
+          <div class="featured-mini-meta">Star Wars &bull; Aug 2</div>
+        </div>
+      </button>
+      <button type="button" class="featured-item-mini" data-video-id="CrQ3F20765Q">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/CrQ3F20765Q/mqdefault.jpg" alt="" loading="lazy">
         </div>
         <div class="featured-mini-info">
           <div class="featured-mini-title">Moff Gideon's Theme</div>
-          <div class="featured-mini-meta">The Mandalorian &bull; 1 mo ago</div>
+          <div class="featured-mini-meta">Star Wars &bull; Jul 12</div>
         </div>
-      </div>
-      <div class="featured-item-mini" onclick="openModal('yfVE0SXtm_k')">
-        <div class="featured-mini-thumb">
-          <img src="https://i.ytimg.com/vi/yfVE0SXtm_k/mqdefault.jpg" alt="Darth Maul Theme" loading="lazy">
-        </div>
-        <div class="featured-mini-info">
-          <div class="featured-mini-title">Darth Maul Shadow Lord</div>
-          <div class="featured-mini-meta">Dark Theme &bull; 2 mos ago</div>
-        </div>
-      </div>
-      <div class="featured-item-mini" onclick="openModal('7oTakA73JNA')">
-        <div class="featured-mini-thumb">
-          <img src="https://i.ytimg.com/vi/7oTakA73JNA/mqdefault.jpg" alt="Mandalorian Medley" loading="lazy">
-        </div>
-        <div class="featured-mini-info">
-          <div class="featured-mini-title">Complete Mando Medley</div>
-          <div class="featured-mini-meta">10 Themes &bull; 3 mos ago</div>
-        </div>
-      </div>
+      </button>
     </div>
   </section>
 
@@ -1129,12 +1155,12 @@
   <section class="apple-showcase-section showcase-hymns" id="hymns">
     <h2 class="apple-product-title">Sacred Hymns</h2>
     <p class="apple-product-subhead">
-      299 acoustic arrangements of timeless worship hymns and prayer songs to glorify God.
+      <span data-count="hymn">302</span> acoustic arrangements of timeless worship hymns and prayer songs to glorify God.
     </p>
 
     <div class="apple-pill-row">
       <a href="videos.html?filter=hymn" class="apple-btn-blue">
-        Explore Hymns (299)
+        Explore Hymns (<span data-count="hymn">302</span>)
       </a>
       <a href="#audio" class="apple-btn-outline">
         Free Audio Library
@@ -1152,44 +1178,44 @@
       </div>
     </div>
 
-    <!-- Curated Featured Hymns Mini-Ribbon -->
-    <div class="featured-strip">
-      <div class="featured-item-mini" onclick="openModal('pGwmj2Ip9Kg')">
+    <!-- Latest hymn uploads (auto-filled from data/all_videos.json; the markup below is the fallback) -->
+    <div class="featured-strip" id="featuredHymn">
+      <button type="button" class="featured-item-mini" data-video-id="kJMw6xiXvTw">
         <div class="featured-mini-thumb">
-          <img src="https://i.ytimg.com/vi/pGwmj2Ip9Kg/mqdefault.jpg" alt="Be Thou My Vision" loading="lazy">
+          <img src="https://i.ytimg.com/vi/kJMw6xiXvTw/mqdefault.jpg" alt="" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">How to Play Be Thou My Vision</div>
+          <div class="featured-mini-meta">Hymn &bull; Nov 8</div>
+        </div>
+      </button>
+      <button type="button" class="featured-item-mini" data-video-id="emMzyOqqkpw">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/emMzyOqqkpw/mqdefault.jpg" alt="" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">Just As I Am Without One Plea</div>
+          <div class="featured-mini-meta">Hymn &bull; Oct 20</div>
+        </div>
+      </button>
+      <button type="button" class="featured-item-mini" data-video-id="5wFD87KB4nk">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/5wFD87KB4nk/mqdefault.jpg" alt="" loading="lazy">
+        </div>
+        <div class="featured-mini-info">
+          <div class="featured-mini-title">What A Friend We Have in Jesus</div>
+          <div class="featured-mini-meta">Hymn &bull; Sep 21</div>
+        </div>
+      </button>
+      <button type="button" class="featured-item-mini" data-video-id="pGwmj2Ip9Kg">
+        <div class="featured-mini-thumb">
+          <img src="https://i.ytimg.com/vi/pGwmj2Ip9Kg/mqdefault.jpg" alt="" loading="lazy">
         </div>
         <div class="featured-mini-info">
           <div class="featured-mini-title">Be Thou My Vision</div>
-          <div class="featured-mini-meta">Classic Hymn &bull; 10 days ago</div>
+          <div class="featured-mini-meta">Hymn &bull; Aug 23</div>
         </div>
-      </div>
-      <div class="featured-item-mini" onclick="openModal('mVkhOZ_dmDY')">
-        <div class="featured-mini-thumb">
-          <img src="https://i.ytimg.com/vi/mVkhOZ_dmDY/mqdefault.jpg" alt="It Is Well with My Soul" loading="lazy">
-        </div>
-        <div class="featured-mini-info">
-          <div class="featured-mini-title">It Is Well with My Soul</div>
-          <div class="featured-mini-meta">Worship Piano &bull; 1 mo ago</div>
-        </div>
-      </div>
-      <div class="featured-item-mini" onclick="openModal('6fjt1aEoukY')">
-        <div class="featured-mini-thumb">
-          <img src="https://i.ytimg.com/vi/6fjt1aEoukY/mqdefault.jpg" alt="Come Thou Fount" loading="lazy">
-        </div>
-        <div class="featured-mini-info">
-          <div class="featured-mini-title">Come Thou Fount</div>
-          <div class="featured-mini-meta">Sacred Praise &bull; 2 mos ago</div>
-        </div>
-      </div>
-      <div class="featured-item-mini" onclick="openModal('q35svFhzn3w')">
-        <div class="featured-mini-thumb">
-          <img src="https://i.ytimg.com/vi/q35svFhzn3w/mqdefault.jpg" alt="Alas! And Did My Savior Bleed" loading="lazy">
-        </div>
-        <div class="featured-mini-info">
-          <div class="featured-mini-title">Alas! And Did My Savior Bleed</div>
-          <div class="featured-mini-meta">Devotional &bull; 3 mos ago</div>
-        </div>
-      </div>
+      </button>
     </div>
   </section>
 
@@ -1230,30 +1256,31 @@
             Subscribe
           </a>
         </div>
-        <p class="bento-tile-sub" style="margin-bottom: 0.5rem;">
-          New piano arrangements published every week alternating between cinematic galaxy scores and worship.
+        <p class="bento-tile-sub" style="margin-bottom: 0.5rem;" id="scheduleSummary">
+          New piano arrangements, alternating between cinematic Star Wars scores and worship hymns.
         </p>
 
-        <ul class="bento-schedule-list" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
+        <ul class="bento-schedule-list" id="scheduleList" style="margin-top: 0.75rem; margin-bottom: 0.75rem;">
           <li>
-            <span style="font-weight: 600;">Saturdays / Sundays</span>
-            <span style="color: var(--text-secondary);">New Video (Alternating Star Wars &amp; Hymns)</span>
+            <span style="font-weight: 600;">New Videos</span>
+            <span style="color: var(--text-secondary);">Alternating Star Wars &amp; Hymns</span>
           </li>
         </ul>
 
-        <!-- 📢 EASILY EDITABLE ANNOUNCEMENTS CARD -->
+        <!-- 📢 ANNOUNCEMENT CARD: edit data/schedule-announcements.json to change it -->
         <div class="apple-announcement-card" id="announcementBlock">
           <div class="announcement-header">
             <span class="announcement-badge" id="announcementBadge">
               <span style="font-size: 0.65rem;">&#9679;</span>
-              Upcoming Release
+              New Release
             </span>
-            <span class="announcement-date" id="announcementDate">This week</span>
+            <span class="announcement-date" id="announcementDate">Nov 8, 2026</span>
           </div>
-          <h4 class="announcement-title" id="announcementTitle">Star Wars: Across the Stars</h4>
+          <h4 class="announcement-title" id="announcementTitle">How to Play Be Thou My Vision (Hymn Tutorial)</h4>
           <p class="announcement-body" id="announcementMsg">
-            Coming this week, the classic love theme from Attack of the Clones.
+            Learn the classic Irish hymn note by note. Sheet music is linked in the video description.
           </p>
+          <a href="#" class="apple-btn-outline announcement-link" id="announcementLink">Watch now</a>
         </div>
       </div>
     </div>
@@ -1287,11 +1314,11 @@
           <div class="about-badges-grid">
             <div class="about-feature-badge">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <span>Star Wars &mdash; Wednesdays</span>
+              <span>Star Wars Themes</span>
             </div>
             <div class="about-feature-badge">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M7 7h10"/></svg>
-              <span>Hymns &mdash; Sundays</span>
+              <span>Classic &amp; Modern Hymns</span>
             </div>
             <div class="about-feature-badge">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -1320,11 +1347,11 @@
     <div class="callout-inner">
       <h2 class="callout-title">The Complete Video Archive</h2>
       <p class="callout-sub">
-        Explore and search all 528 arrangements—including full covers, animated series medleys, and sacred hymn recordings.
+        Explore and search all <span data-count="all">533</span> arrangements—including full covers, animated series medleys, and sacred hymn recordings.
       </p>
       <div class="apple-pill-row">
         <a href="videos.html" class="apple-btn-blue" style="padding: 0.8rem 1.8rem; font-size: 1rem;">
-          Open Video Catalog (528) &rarr;
+          Open Video Catalog (<span data-count="all">533</span>) &rarr;
         </a>
       </div>
     </div>
@@ -1404,8 +1431,8 @@
       <div>
         <h4 class="directory-col-title">Schedule</h4>
         <ul class="directory-list">
-          <li><a href="#schedule">Star Wars Wednesdays</a></li>
-          <li><a href="#schedule">Hymn Sundays</a></li>
+          <li><a href="#schedule">Release Schedule</a></li>
+          <li><a href="#schedule">Latest News</a></li>
           <li><a href="https://www.youtube.com/@nathantraceypiano/community" target="_blank">Community Posts</a></li>
         </ul>
       </div>
@@ -1462,20 +1489,146 @@
       });
     }
 
-    // Dynamic schedule announcement loader
-    try {
-      fetch("data/schedule-announcements.json")
-        .then(r => r.json())
-        .then(data => {
-          if (data && data.announcement && data.announcement.active) {
-            const a = data.announcement;
-            if (a.badge) document.getElementById("announcementBadge").innerHTML = `<span style="font-size: 0.65rem;">&#9679;</span> ${a.badge}`;
-            if (a.date) document.getElementById("announcementDate").textContent = a.date;
-            if (a.title) document.getElementById("announcementTitle").textContent = a.title;
-            if (a.message) document.getElementById("announcementMsg").textContent = a.message;
-          }
-        }).catch(() => {});
-    } catch (e) {}
+    // ── Helpers ──
+    const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+    // "2026-11-08" -> "Nov 8" (adds the year if it isn't the current year). Non-date strings pass through.
+    function formatPublished(value) {
+      const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || "");
+      if (!m) return value || "";
+      const year = Number(m[1]);
+      const label = `${MONTHS[Number(m[2]) - 1]} ${Number(m[3])}`;
+      return year === new Date().getFullYear() ? label : `${label}, ${year}`;
+    }
+
+    // Trim "- Piano Cover with Lyrics", "(Piano Cover ...)", "on Piano" etc. so titles fit the mini cards.
+    function shortTitle(title) {
+      return (title || "")
+        .replace(/\s*[\(\[][^\)\]]*(piano|cover|tutorial|lyrics|music|theme)[^\)\]]*[\)\]]/gi, "")
+        .replace(/\s+[-|–]\s+.*(piano|cover|lyrics|hymn).*$/i, "")
+        .replace(/\s+on piano\b/i, "")
+        .replace(/\s*#\S+/g, "")
+        .trim() || title;
+    }
+
+    function buildFeaturedCard(video, label) {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "featured-item-mini";
+      btn.dataset.videoId = video.id;
+      btn.title = video.title;
+
+      const thumb = document.createElement("div");
+      thumb.className = "featured-mini-thumb";
+      const img = document.createElement("img");
+      img.src = `https://i.ytimg.com/vi/${video.id}/mqdefault.jpg`;
+      img.alt = "";
+      img.loading = "lazy";
+      thumb.appendChild(img);
+
+      const info = document.createElement("div");
+      info.className = "featured-mini-info";
+      const t = document.createElement("div");
+      t.className = "featured-mini-title";
+      t.textContent = shortTitle(video.title);
+      const meta = document.createElement("div");
+      meta.className = "featured-mini-meta";
+      const when = formatPublished(video.published);
+      meta.textContent = when ? `${label} • ${when}` : label;
+      info.append(t, meta);
+
+      btn.append(thumb, info);
+      return btn;
+    }
+
+    // ── Live counts + latest uploads from data/all_videos.json (kept current by the GitHub Action) ──
+    fetch("data/all_videos.json", { cache: "no-cache" })
+      .then(r => r.json())
+      .then(videos => {
+        if (!Array.isArray(videos) || !videos.length) return;
+        const counts = {
+          all: videos.length,
+          sw: videos.filter(v => v.cat === "sw").length,
+          hymn: videos.filter(v => v.cat === "hymn").length,
+          other: videos.filter(v => v.cat === "other").length
+        };
+        document.querySelectorAll("[data-count]").forEach(el => {
+          const n = counts[el.dataset.count];
+          if (typeof n === "number") el.textContent = n;
+        });
+
+        // The catalog is stored newest-first. Only feature uploads with a real date (skips Shorts/legacy rows).
+        const dated = videos.filter(v => /^\d{4}-\d{2}-\d{2}$/.test(v.published || ""));
+        [["featuredSw", "sw", "Star Wars"], ["featuredHymn", "hymn", "Hymn"]].forEach(([id, cat, label]) => {
+          const strip = document.getElementById(id);
+          const latest = dated.filter(v => v.cat === cat).slice(0, 4);
+          if (!strip || latest.length < 2) return;
+          strip.replaceChildren(...latest.map(v => buildFeaturedCard(v, label)));
+        });
+      })
+      .catch(() => { /* keep the fallback markup */ });
+
+    // ── Schedule + announcement from data/schedule-announcements.json ──
+    fetch("data/schedule-announcements.json", { cache: "no-cache" })
+      .then(r => r.json())
+      .then(data => {
+        if (!data) return;
+
+        if (data.scheduleSummary) {
+          document.getElementById("scheduleSummary").textContent = data.scheduleSummary;
+        }
+
+        if (Array.isArray(data.weeklySchedule) && data.weeklySchedule.length) {
+          const list = document.getElementById("scheduleList");
+          list.replaceChildren(...data.weeklySchedule.map(item => {
+            const li = document.createElement("li");
+            const left = document.createElement("span");
+            left.style.fontWeight = "600";
+            left.textContent = item.day || "";
+            const right = document.createElement("span");
+            right.style.color = "var(--text-secondary)";
+            right.textContent = item.category || "";
+            if (item.details) li.title = item.details;
+            li.append(left, right);
+            return li;
+          }));
+        }
+
+        const block = document.getElementById("announcementBlock");
+        const a = data.announcement;
+        if (!a || !a.active) {
+          block.style.display = "none";
+          return;
+        }
+        block.style.display = "";
+        if (a.badge) {
+          const badge = document.getElementById("announcementBadge");
+          const dot = document.createElement("span");
+          dot.style.fontSize = "0.65rem";
+          dot.textContent = "●";
+          badge.replaceChildren(dot, document.createTextNode(" " + a.badge));
+        }
+        if (a.date) document.getElementById("announcementDate").textContent = a.date;
+        if (a.title) document.getElementById("announcementTitle").textContent = a.title;
+        if (a.message) document.getElementById("announcementMsg").textContent = a.message;
+
+        const link = document.getElementById("announcementLink");
+        link.classList.remove("show");
+        if (a.videoId) {
+          link.href = `https://www.youtube.com/watch?v=${encodeURIComponent(a.videoId)}`;
+          link.dataset.videoId = a.videoId;
+          link.removeAttribute("target");
+        } else if (a.linkUrl) {
+          link.href = a.linkUrl;
+          delete link.dataset.videoId;
+          if (/^https?:/i.test(a.linkUrl)) link.target = "_blank";
+        }
+        if (a.videoId || a.linkUrl) {
+          link.textContent = a.linkText || "Learn more";
+          link.classList.add("show");
+        }
+      })
+      .catch(() => { /* keep the fallback markup */ });
 
     const videoModal = document.getElementById("videoModal");
     const modalIframe = document.getElementById("modalIframe");
@@ -1505,6 +1658,14 @@
       if (e.key === "Escape" && videoModal && videoModal.classList.contains("open")) {
         closeModal();
       }
+    });
+
+    // Any element with data-video-id (featured cards, announcement button) opens the player
+    document.addEventListener("click", (e) => {
+      const trigger = e.target.closest("[data-video-id]");
+      if (!trigger) return;
+      e.preventDefault();
+      openModal(trigger.dataset.videoId);
     });
 
     const requestForm = document.getElementById("songRequestForm");
